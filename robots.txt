@@ -1,0 +1,4 @@
+Sitemap: https://jiayiliu.github.com/sitemapindex.xml
+
+User-Agent: *
+Host: jiayiliu.github.com

@@ -111,7 +111,7 @@
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -141,7 +141,7 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -168,7 +168,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py &gt;&gt; no_train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -183,7 +183,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> &gt;&gt; no_train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -198,7 +198,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -t <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_tf_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -213,7 +213,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_random_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -231,7 +231,7 @@
 <span class="n">plot</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -241,7 +241,7 @@
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -297,7 +297,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -312,7 +312,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_w0_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -w <span class="m">0</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_seed_fixed_w0.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -325,7 +325,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_seed_fixed_w0_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -335,7 +335,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -360,7 +360,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_no_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> &gt;&gt; train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -373,7 +373,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_no_seed_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -383,7 +383,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -408,7 +408,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">1</span> &gt;&gt; train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -421,7 +421,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_seed_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -431,7 +431,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -456,7 +456,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -469,7 +469,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_random_tf_seeds_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -479,7 +479,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -504,7 +504,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_hash_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_hash_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -517,7 +517,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_random_tf_hash_seeds_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -527,7 +527,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -552,7 +552,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">4</span> -a <span class="m">2</span> -s -f train_all_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -565,7 +565,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_all_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -575,7 +575,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -609,7 +609,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">3</span> -a <span class="m">1</span> -w <span class="m">4</span> -s -f train_all_fixed_w4_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed_w4.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -622,7 +622,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_all_fixed_w4_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -632,7 +632,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -662,7 +662,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="n">plot</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -672,7 +672,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+<div class="prompt"></div>
 
 
 
@@ -757,6 +757,25 @@ However, if you code uses tensorflow random generator somewhere, you might want 
             <script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+    </script><!-- end fancy dates --><script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '321809675046639',
+      xfbml      : true,
+      version    : 'v3.1'
+    });
+  
+    FB.AppEvents.logPageView();
+  
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>

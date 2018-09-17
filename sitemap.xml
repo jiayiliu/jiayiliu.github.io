@@ -7,30 +7,22 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://jiayiliu.github.com/</loc>
-  <lastmod>2018-09-07T06:20:00Z</lastmod>
+  <lastmod>2018-09-17T06:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2018/</loc>
-  <lastmod>2018-09-07T06:20:00Z</lastmod>
+  <lastmod>2018-09-17T06:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/archive.html</loc>
-  <lastmod>2018-09-07T06:20:00Z</lastmod>
+  <lastmod>2018-09-17T06:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/</loc>
-  <lastmod>2018-09-07T06:08:00Z</lastmod>
- </url>
- <url>
-  <loc>https://jiayiliu.github.com/galleries/</loc>
-  <lastmod>2018-09-07T06:08:00Z</lastmod>
- </url>
- <url>
-  <loc>https://jiayiliu.github.com/listings/</loc>
-  <lastmod>2018-09-07T06:08:00Z</lastmod>
+  <lastmod>2018-09-17T06:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/random-tests-for-keras/</loc>
-  <lastmod>2018-09-07T06:20:00Z</lastmod>
+  <lastmod>2018-09-17T06:07:00Z</lastmod>
  </url>
 </urlset>

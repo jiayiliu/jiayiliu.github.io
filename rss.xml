@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Lab of Random</title><link>https://jiayiliu.github.com/</link><description>Records of random experiments</description><atom:link href="https://jiayiliu.github.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:jiayi.uiuc@gmail.com"&gt;Jiayi (Jason) Liu&lt;/a&gt; </copyright><lastBuildDate>Fri, 07 Sep 2018 06:20:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Random Tests for Keras</title><link>https://jiayiliu.github.com/posts/random-tests-for-keras/</link><dc:creator>Jiayi (Jason) Liu</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lab of Random</title><link>https://jiayiliu.github.com/</link><description>Records of random experiments</description><atom:link href="https://jiayiliu.github.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:jiayi.uiuc@gmail.com"&gt;Jiayi (Jason) Liu&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 Sep 2018 06:07:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Random Tests for Keras</title><link>https://jiayiliu.github.com/posts/random-tests-for-keras/</link><dc:creator>Jiayi (Jason) Liu</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Test-Keras-random-seed-setting"&gt;Test Keras random seed setting&lt;a class="anchor-link" href="https://jiayiliu.github.com/posts/random-tests-for-keras/#Test-Keras-random-seed-setting"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This is note on reducing randomness in model training in Keras. In the &lt;a href="https://keras.io/getting-started/faq/#how-can-i-obtain-reproducible-results-using-keras-during-development"&gt;official documentaion&lt;/a&gt;, you can find a solution to fix the randomness.  In the following, I am trying to disentangle the different contributions.&lt;/p&gt;
 &lt;p&gt;More investigation on the code level is needed to understand the full picture.  However, it is out of the scope of this work.&lt;/p&gt;
@@ -26,7 +27,7 @@
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -56,13 +57,14 @@
     &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Initial-weights-without-training"&gt;Initial weights without training&lt;a class="anchor-link" href="https://jiayiliu.github.com/posts/random-tests-for-keras/#Initial-weights-without-training"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let's take a look of the prediction accuracy and loss before any training.  It mainly tells us whether the initial weights are same for different runs.&lt;/p&gt;
 
@@ -79,7 +81,7 @@
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py &amp;gt;&amp;gt; no_train_no_seed_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -94,7 +96,7 @@
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -n &lt;span class="m"&gt;1&lt;/span&gt; &amp;gt;&amp;gt; no_train_numpy_seed_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -109,7 +111,7 @@
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -n &lt;span class="m"&gt;1&lt;/span&gt; -t &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &amp;gt;&amp;gt; no_train_numpy_seed_fixed_diff_tf_seeds.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -124,7 +126,7 @@
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -n &lt;span class="m"&gt;1&lt;/span&gt; -r &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &amp;gt;&amp;gt; no_train_numpy_seed_fixed_diff_random_seeds.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -142,7 +144,7 @@
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -152,7 +154,7 @@
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -168,7 +170,8 @@
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Conclusion"&gt;Conclusion&lt;a class="anchor-link" href="https://jiayiliu.github.com/posts/random-tests-for-keras/#Conclusion"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Using numpy random seed is typically sufficient to fix the initial weights of the model.
 However, if you code uses tensorflow random generator somewhere, you might want to fix it too.&lt;/p&gt;
@@ -203,7 +206,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -218,7 +221,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -f train_numpy_seed_fixed_w0_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv -e &lt;span class="m"&gt;1&lt;/span&gt; -w &lt;span class="m"&gt;0&lt;/span&gt; -n &lt;span class="m"&gt;2&lt;/span&gt; -r &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &amp;gt;&amp;gt; train_numpy_seed_fixed_w0.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -231,7 +234,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_numpy_seed_fixed_w0_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -241,7 +244,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -266,7 +269,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -f train_no_seed_fixed_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv -e &lt;span class="m"&gt;1&lt;/span&gt; &amp;gt;&amp;gt; train_no_seed_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -279,7 +282,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_no_seed_fixed_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -289,7 +292,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -314,7 +317,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -f train_numpy_seed_fixed_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv -e &lt;span class="m"&gt;1&lt;/span&gt; -n &lt;span class="m"&gt;1&lt;/span&gt; &amp;gt;&amp;gt; train_numpy_seed_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -327,7 +330,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_numpy_seed_fixed_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -337,7 +340,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -362,7 +365,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -f train_numpy_random_tf_seeds_fixed_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv -e &lt;span class="m"&gt;1&lt;/span&gt; -n &lt;span class="m"&gt;2&lt;/span&gt; -r &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &amp;gt;&amp;gt; train_numpy_random_tf_seeds_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -375,7 +378,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_numpy_random_tf_seeds_fixed_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -385,7 +388,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -410,7 +413,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -f train_numpy_random_tf_hash_seeds_fixed_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv -e &lt;span class="m"&gt;1&lt;/span&gt; -n &lt;span class="m"&gt;2&lt;/span&gt; -r &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &amp;gt;&amp;gt; train_numpy_random_tf_hash_seeds_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -423,7 +426,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_numpy_random_tf_hash_seeds_fixed_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -433,7 +436,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -458,7 +461,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -e &lt;span class="m"&gt;1&lt;/span&gt; -r &lt;span class="m"&gt;2&lt;/span&gt; -n &lt;span class="m"&gt;1&lt;/span&gt; -t &lt;span class="m"&gt;4&lt;/span&gt; -a &lt;span class="m"&gt;2&lt;/span&gt; -s -f train_all_fixed_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv &amp;gt;&amp;gt; train_all_fixed.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -471,7 +474,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_all_fixed_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -481,7 +484,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -497,7 +500,8 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Parallel-processing-impact"&gt;Parallel processing impact&lt;a class="anchor-link" href="https://jiayiliu.github.com/posts/random-tests-for-keras/#Parallel-processing-impact"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
@@ -512,7 +516,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; ./mnist_cnn.py -e &lt;span class="m"&gt;1&lt;/span&gt; -r &lt;span class="m"&gt;2&lt;/span&gt; -n &lt;span class="m"&gt;1&lt;/span&gt; -t &lt;span class="m"&gt;3&lt;/span&gt; -a &lt;span class="m"&gt;1&lt;/span&gt; -w &lt;span class="m"&gt;4&lt;/span&gt; -s -f train_all_fixed_w4_&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.csv &amp;gt;&amp;gt; train_all_fixed_w4.csv &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -525,7 +529,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plot_history&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"train_all_fixed_w4_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;.csv"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -535,7 +539,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -565,7 +569,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -575,7 +579,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -591,7 +595,8 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Other-sources-of-randomness"&gt;Other sources of randomness&lt;a class="anchor-link" href="https://jiayiliu.github.com/posts/random-tests-for-keras/#Other-sources-of-randomness"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Here is a list of to-do's that I am not going to address in this post:&lt;/p&gt;
 &lt;ol&gt;

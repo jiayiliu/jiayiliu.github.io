@@ -1229,26 +1229,16 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-BODY_END = """<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '321809675046639',
-      xfbml      : true,
-      version    : 'v3.1'
-    });
-  
-    FB.AppEvents.logPageView();
-  
-  };
+BODY_END = """<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>"""
+  gtag('config', 'UA-128364527-2');
+</script>
+"""
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.

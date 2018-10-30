@@ -8,6 +8,7 @@
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
@@ -18,71 +19,75 @@
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<!-- Menubar -->
-
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="https://jiayiliu.github.com/">
-
-                <span id="blog-title">Lab of Random</span>
-            </a>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
         </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" role="navigation" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="archive.html">Archive</a>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://jiayiliu.github.com/">
+
+            <span id="blog-title">Lab of Random</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav"></ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archive</a>
                 </li>
-<li>
-<a href="categories/">Tags</a>
+<li class="nav-item">
+<a href="categories/" class="nav-link">Tags</a>
                 </li>
-<li>
-<a href="rss.xml">RSS feed</a>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">RSS feed</a>
 
                 
             </li>
 </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
+        
+        
+    
+        
 
     
-
-
-    
-<div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/random-tests-for-keras/" class="u-url">Random Tests for Keras</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jiayi (Jason) Liu
-            </span></p>
-            <p class="dateline"><a href="posts/random-tests-for-keras/" rel="bookmark"><time class="published dt-published" datetime="2018-09-06T23:20:04-07:00" title="2018-09-06 23:20">2018-09-06 23:20</time></a></p>
-                <p class="commentline">
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/random-tests-for-keras/" class="u-url">Random Tests for Keras</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Jiayi (Jason) Liu
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/random-tests-for-keras/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-09-06T23:20:04-07:00" itemprop="datePublished" title="2018-09-06 23:20">2018-09-06 23:20</time></a>
+            </p>
+                        <p class="commentline">
         
 <span class="fb-comments-count" data-url="/posts/random-tests-for-keras/">
 
 
-        </span></p>
+                </span></p>
 </div>
-    </header><div class="e-content entry-content">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+            </header><div class="e-content entry-content">
+                    <div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -111,7 +116,7 @@
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -141,7 +146,7 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -168,7 +173,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py &gt;&gt; no_train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -183,7 +188,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> &gt;&gt; no_train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -198,7 +203,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -t <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_tf_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -213,7 +218,7 @@
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_random_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -231,7 +236,7 @@
 <span class="n">plot</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -241,7 +246,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -297,7 +302,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -312,7 +317,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_w0_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -w <span class="m">0</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_seed_fixed_w0.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -325,7 +330,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_seed_fixed_w0_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -335,7 +340,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -360,7 +365,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_no_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> &gt;&gt; train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -373,7 +378,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_no_seed_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -383,7 +388,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -408,7 +413,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">1</span> &gt;&gt; train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -421,7 +426,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_seed_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -431,7 +436,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -456,7 +461,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -469,7 +474,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_random_tf_seeds_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -479,7 +484,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -504,7 +509,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_hash_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_hash_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -517,7 +522,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_numpy_random_tf_hash_seeds_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -527,7 +532,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -552,7 +557,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">4</span> -a <span class="m">2</span> -s -f train_all_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -565,7 +570,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_all_fixed_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -575,7 +580,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -609,7 +614,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">3</span> -a <span class="m">1</span> -w <span class="m">4</span> -s -f train_all_fixed_w4_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed_w4.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -622,7 +627,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_history</span><span class="p">(</span><span class="s2">"train_all_fixed_w4_</span><span class="si">%d</span><span class="s2">.csv"</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -632,7 +637,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -662,7 +667,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <span class="n">plot</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -672,7 +677,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -702,15 +707,13 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 </div>
 </div>
 </div>
-    </div>
-  </div>
-
-    </div>
-    </article>
 </div>
+                </div>
+            </article>
+</div>
+    
 
-
-
+    
         
 <div id="fb-root"></div>
 <script>
@@ -742,11 +745,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
    }(document, 'script', 'facebook-jssdk'));
 </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-        </script>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
+        </script><!--End of body content--><footer id="footer">
             Contents © 2018         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
@@ -754,28 +753,21 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 </div>
 
 
-            <script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+        <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '321809675046639',
-      xfbml      : true,
-      version    : 'v3.1'
-    });
-  
-    FB.AppEvents.logPageView();
-  
-  };
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  gtag('config', 'UA-128364527-2');
 </script>
 </body>
 </html>

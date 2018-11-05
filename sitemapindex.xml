@@ -6,11 +6,31 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://jiayiliu.github.com/categories/cat_tensorflow.xml</loc>
+  <lastmod>2018-11-05T05:16:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/keras.xml</loc>
+  <lastmod>2018-11-05T05:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/profiling.xml</loc>
+  <lastmod>2018-11-05T05:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/python.xml</loc>
+  <lastmod>2018-11-05T05:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/tensorflow.xml</loc>
+  <lastmod>2018-11-05T05:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://jiayiliu.github.com/rss.xml</loc>
-  <lastmod>2018-11-05T04:05:00Z</lastmod>
+  <lastmod>2018-11-05T05:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/sitemap.xml</loc>
-  <lastmod>2018-11-05T04:05:00Z</lastmod>
+  <lastmod>2018-11-05T05:24:00Z</lastmod>
  </sitemap>
 </sitemapindex>

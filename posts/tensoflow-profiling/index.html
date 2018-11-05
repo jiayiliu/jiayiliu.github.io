@@ -1,76 +1,62 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# fb: http://ogp.me/ns/fb# " lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+fb: http://ogp.me/ns/fb# " lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="description" content="Introduces the TensorFlow profiler for Python user in practice.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TensorFlow Profiling | Lab of Random</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://jiayiliu.github.com/posts/tensoflow-profiling/">
 <meta property="fb:app_id" content="321809675046639">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
 <link rel="prev" href="../random-tests-for-keras/" title="Random Tests for Keras" type="text/html">
 <meta property="og:site_name" content="Lab of Random">
 <meta property="og:title" content="TensorFlow Profiling">
 <meta property="og:url" content="https://jiayiliu.github.com/posts/tensoflow-profiling/">
-<meta property="og:description" content="In [1]:
-
-    
-import tensorflow as tf
-import tabulate
-from tensorflow.profiler import ProfileOptionBuilder as POB
-
-
-    
-
-
-
-
-
-
-
-This article introduces the TensorFlow profiler for Python user in pract">
+<meta property="og:description" content="Introduces the TensorFlow profiler for Python user in practice.">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-11-04T19:44:01-08:00">
+<meta property="article:tag" content="profiling">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="tensorflow">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<!-- Header and menu bar -->
-<div class="container">
-      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
-          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
-            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
-                
-            </div>
-        </div>
-          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href="https://jiayiliu.github.com/">
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="https://jiayiliu.github.com/">
 
             <span id="blog-title">Lab of Random</span>
         </a>
-          </div>
-            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
-            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
-<li class="nav-item">
-    <a href="index.ipynb" id="sourcelink" class="nav-link">Source</a>
-    </li>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-                    
-            </ul></nav>
-</div>
-    </div>
-</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
-            <ul class="navbar-nav nav-fill d-flex w-100">
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
 <li class="nav-item">
 <a href="../../archive.html" class="nav-link">Archive</a>
                 </li>
@@ -83,12 +69,19 @@ This article introduces the TensorFlow profiler for Python user in pract">
                 
             </li>
 </ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.ipynb" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
 </div>
 <!-- /.navbar-collapse -->
-</nav>
-</div>
-
-<div class="container" id="content" role="main">
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
         
@@ -117,6 +110,17 @@ This article introduces the TensorFlow profiler for Python user in pract">
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This article introduces the TensorFlow profiler for Python user in practice. First, I will present the basic configuration for the profiler, then I use an example to show how to integrate it with existing code. In the end, I conclude with how to access the results from the profiler's output.</p>
+<p>TensorFlow profiler (profiler hereafter) is a tool for analyzing deep neural network and performance tuning.<!-- TEASER_END --></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [1]:</div>
@@ -131,17 +135,6 @@ This article introduces the TensorFlow profiler for Python user in pract">
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This article introduces the TensorFlow profiler for Python user in practice. First, I will present the basic configuration for the profiler, then I use an example to show how to integrate it with existing code. In the end, I conclude with how to access the results from the profiler's output.</p>
-<p>TensorFlow profiler (profiler hereafter) is a tool for analyzing deep neural network and performance tuning.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -377,36 +370,12 @@ There are two approaches:</p>
 <tr>
 <td style="text-align:center">order_by</td>
 <td style="text-align:center">order_by</td>
-<td style="text-align:left">Order the results by name\</td>
-<td>depth\</td>
-<td>bytes\</td>
-<td>peak_bytes\</td>
-<td>residual_bytes\</td>
-<td>output_bytes\</td>
-<td>micros\</td>
-<td>accelerator_micros\</td>
-<td>cpu_micros\</td>
-<td>params\</td>
-<td>float_ops\</td>
-<td>occurrence].</td>
+<td style="text-align:left">Order the results by [name<code>|</code>depth<code>|</code>bytes<code>|</code>peak_bytes<code>|</code>residual_bytes<code>|</code>output_bytes<code>|</code>micros<code>|</code>accelerator_micros<code>|</code>cpu_micros<code>|</code>params<code>|</code>float_ops<code>|</code>occurrence].</td>
 </tr>
 <tr>
 <td style="text-align:center">select</td>
 <td style="text-align:center">select</td>
-<td style="text-align:left">Comma-separated list of attributes to show. Supported attributes: bytes\</td>
-<td>peak_bytes\</td>
-<td>residual_bytes\</td>
-<td>output_bytes\</td>
-<td>micros\</td>
-<td>accelerator_micros\</td>
-<td>cpu_micros\</td>
-<td>params\</td>
-<td>float_ops\</td>
-<td>occurrence\</td>
-<td>tensor_value\</td>
-<td>device\</td>
-<td>op_types\</td>
-<td>input_shapes.</td>
+<td style="text-align:left">Comma-separated list of attributes to show. Supported attributes: [bytes<code>|</code>peak_bytes<code>|</code>residual_bytes<code>|</code>output_bytes<code>|</code>micros<code>|</code>accelerator_micros<code>|</code>cpu_micros<code>|</code>params<code>|</code>float_ops<code>|</code>occurrence<code>|</code>tensor_value<code>|</code>device<code>|</code>op_types<code>|</code>input_shapes].</td>
 </tr>
 <tr>
 <td style="text-align:center">with_step</td>
@@ -700,7 +669,12 @@ So be careful when you are sensitive to the result.  Read more <a href="https://
 </div>
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/profiling/" rel="tag">profiling</a></li>
+            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../categories/tensorflow/" rel="tag">tensorflow</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
                 <a href="../random-tests-for-keras/" rel="prev" title="Random Tests for Keras">Previous post</a>
             </li>
@@ -731,8 +705,18 @@ So be careful when you are sensitive to the result.  Read more <a href="https://
 
 
         </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-        </script></article><div id="fb-root"></div>
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><div id="fb-root"></div>
 <script>
     // thank lxml for this
     $('.fb-comments-count').each(function(i, obj) {

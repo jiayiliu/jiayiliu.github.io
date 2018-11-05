@@ -7,7 +7,7 @@ Build by [Nikola](https://getnikola.com).
 1. Put `ipynb` file under `posts/`;
 2. Add the following info into `metadata` in the notebook file ([ref](https://getnikola.com/handbook.html#jupyter-notebook-metadata)):
     
-    "nikola": {
+  "nikola": {
    "category": "",
    "date": "2018-11-04 19:44:01 UTC-08:00",
    "description": "",

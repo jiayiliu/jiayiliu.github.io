@@ -6,3 +6,5 @@ output
 .doit.db.db
 .venv
 nikolaserve.pid
+.ipynb_checkpoint
+.doit*

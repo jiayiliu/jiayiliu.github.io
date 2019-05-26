@@ -92,8 +92,7 @@ navbar-dark bg-dark
         </span></p>
 </div>
     </header><div class="p-summary entry-summary">
-    <div>
-<div class="cell border-box-sizing text_cell rendered">
+    <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -102,74 +101,7 @@ navbar-dark bg-dark
 </h2>
 <p>Tensorflow community keeps improving to address  <a href="http://nicodjimenez.github.io/2017/10/08/tensorflow.html">problems with Tensorflow</a>.</p>
 <p>At the time of TF 2.0 release, I sitll found it is very painful to follow the TF documentation to get things done.  Here I write down some random notes during my short journey to use TF Lite for the quantization. Also I hope this tour can guide some other people to find an easier life when use TF.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">tf</span><span class="o">.</span><span class="n">__version__</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>'1.13.1'</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Honeymoon">Honeymoon<a class="anchor-link" href="posts/tensoflow-lite/#Honeymoon">¶</a>
-</h3>
-<p>The first glance of the TF Lite <a href="https://www.tensorflow.org/lite/convert/python_api">documentation</a> delights me by its well-organized structure and detailed documentation.</p>
-<p>I followed the tutorial on the model conversion without worrying about <a href="https://www.reddit.com/r/MachineLearning/comments/6nupas/p_tensorflow_whats_the_best_way_to_saverestore/">the different ways of saving a TF model</a>.  And quickly, I got what I want - save a quantized model:</p>
-<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span><span class="o">.</span><span class="n">as_default</span><span class="p">():</span>
-  <span class="n">img</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"img"</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-  <span class="n">const</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">])</span> <span class="o">+</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">])</span>
-  <span class="n">val</span> <span class="o">=</span> <span class="n">img</span> <span class="o">+</span> <span class="n">const</span>
-  <span class="n">out</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">fake_quant_with_min_max_args</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"output"</span><span class="p">)</span>
-
-  <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-    <span class="n">converter</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">TFLiteConverter</span><span class="o">.</span><span class="n">from_session</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="p">[</span><span class="n">img</span><span class="p">],</span> <span class="p">[</span><span class="n">out</span><span class="p">])</span>
-    <span class="n">converter</span><span class="o">.</span><span class="n">inference_type</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">lite</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">QUANTIZED_UINT8</span>
-    <span class="n">input_arrays</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">get_input_arrays</span><span class="p">()</span>
-    <span class="n">converter</span><span class="o">.</span><span class="n">quantized_input_stats</span> <span class="o">=</span> <span class="p">{</span><span class="n">input_arrays</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)}</span>  <span class="c1"># mean, std_dev</span>
-    <span class="n">tflite_model</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
-    <span class="nb">open</span><span class="p">(</span><span class="s2">"converted_model.tflite"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">tflite_model</span><span class="p">)</span>
-</pre></div>
-<p>Now, the pain starts - I could not find a solution to restore the quantized model to produce the right prediction!</p>
-<p>And during my exploration on solving the challenge (yes, it is a challenge given the many misleading and confusing messages in the official documentation), I even start wondering whether TF community welcome users or it is just a propaganda tool for Google and no true intention for sharing.</p>
-<p>Now let me show you my user journey towards the evil side of TF.
-</p>
 <p class="more"><a href="posts/tensoflow-lite/">Read more…</a></p>
-</div>
 </div>
 </div>
 </div>

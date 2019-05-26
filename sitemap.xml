@@ -7,46 +7,42 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://jiayiliu.github.com/</loc>
-  <lastmod>2018-10-30T01:16:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2018/</loc>
-  <lastmod>2018-10-30T01:16:00Z</lastmod>
+  <lastmod>2018-11-05T05:34:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/archive.html</loc>
-  <lastmod>2018-11-05T05:24:00Z</lastmod>
+  <lastmod>2019-05-26T00:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/</loc>
-  <lastmod>2018-11-05T05:22:00Z</lastmod>
- </url>
- <url>
-  <loc>https://jiayiliu.github.com/categories/cat_tensorflow/</loc>
-  <lastmod>2018-11-05T04:28:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/keras/</loc>
-  <lastmod>2018-11-05T05:22:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/profiling/</loc>
-  <lastmod>2018-11-05T04:10:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/python/</loc>
-  <lastmod>2018-11-05T04:10:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/tensorflow/</loc>
-  <lastmod>2018-11-05T04:10:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/random-tests-for-keras/</loc>
-  <lastmod>2018-10-30T01:16:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-profiling/</loc>
-  <lastmod>2018-11-05T03:45:00Z</lastmod>
+  <lastmod>2018-11-05T05:35:00Z</lastmod>
  </url>
 </urlset>

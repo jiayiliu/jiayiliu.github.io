@@ -6,6 +6,10 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://jiayiliu.github.com/categories/cat_tensorflow.xml</loc>
+  <lastmod>2019-05-26T04:06:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://jiayiliu.github.com/categories/keras.xml</loc>
   <lastmod>2019-05-26T00:48:00Z</lastmod>
  </sitemap>
@@ -23,10 +27,10 @@
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/rss.xml</loc>
-  <lastmod>2019-05-26T00:48:00Z</lastmod>
+  <lastmod>2019-05-26T04:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/sitemap.xml</loc>
-  <lastmod>2019-05-26T00:48:00Z</lastmod>
+  <lastmod>2019-05-26T04:06:00Z</lastmod>
  </sitemap>
 </sitemapindex>

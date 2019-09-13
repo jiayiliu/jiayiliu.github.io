@@ -6,39 +6,51 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://jiayiliu.github.com/categories/benchmark.xml</loc>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_life.xml</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_programming.xml</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_tensorflow.xml</loc>
-  <lastmod>2019-06-20T04:49:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/imagenet.xml</loc>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/keras.xml</loc>
-  <lastmod>2019-06-20T04:49:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/profiling.xml</loc>
-  <lastmod>2019-06-20T04:49:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/python.xml</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/research.xml</loc>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/tensorflow.xml</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/rss.xml</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/sitemap.xml</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </sitemap>
 </sitemapindex>

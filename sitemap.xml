@@ -19,11 +19,15 @@
  </url>
  <url>
   <loc>https://jiayiliu.github.com/archive.html</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:03:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/</loc>
-  <lastmod>2019-08-04T05:32:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/categories/benchmark/</loc>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_life/</loc>
@@ -38,6 +42,10 @@
   <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
+  <loc>https://jiayiliu.github.com/categories/imagenet/</loc>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://jiayiliu.github.com/categories/keras/</loc>
   <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
@@ -50,8 +58,16 @@
   <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
+  <loc>https://jiayiliu.github.com/categories/research/</loc>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://jiayiliu.github.com/categories/tensorflow/</loc>
   <lastmod>2019-06-20T04:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/posts/imagenet-benchmark/</loc>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/random-tests-for-keras/</loc>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+fb: http://ogp.me/ns/fb# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="ImageNet challenge benchmark from paperswithcode.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ImageNet Challenge Benchmark | Lab of Random</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://jiayiliu.github.com/posts/imagenet-benchmark/">
+<meta property="fb:app_id" content="321809675046639">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
+<link rel="prev" href="../refinance_a_loan/" title="Refinance Analysis" type="text/html">
+<meta property="og:site_name" content="Lab of Random">
+<meta property="og:title" content="ImageNet Challenge Benchmark">
+<meta property="og:url" content="https://jiayiliu.github.com/posts/imagenet-benchmark/">
+<meta property="og:description" content="ImageNet challenge benchmark from paperswithcode.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-09-12T22:44:00-07:00">
+<meta property="article:tag" content="benchmark">
+<meta property="article:tag" content="imagenet">
+<meta property="article:tag" content="research">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="https://jiayiliu.github.com/">
+
+            <span id="blog-title">Lab of Random</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.ipynb" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">ImageNet Challenge Benchmark</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Jiayi (Jason) Liu
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2019-09-12T22:44:00-07:00" itemprop="datePublished" title="2019-09-12 22:44">2019-09-12 22:44</time></a>
+            </p>
+                <p class="commentline">
+        
+<span class="fb-comments-count" data-url="/posts/imagenet-benchmark/">
+
+
+            
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">Source</a></p>
+
+        </span></p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ImageNet-Benchmark">ImageNet Benchmark<a class="anchor-link" href="#ImageNet-Benchmark">¶</a>
+</h2>
+<p>Interactive plot of ImageNet challenge benchmark.  Data is queried from <a href="https:/paperswithcode.com/">papers with code</a>.<!-- END_TEASER --></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># package requirements:</span>
+<span class="c1"># bokeh</span>
+<span class="c1"># beautifulsoup4</span>
+<span class="c1"># pandas&gt;=0.25.1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">bs4</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="k">import</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="k">import</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">LabelSet</span>
+<span class="kn">from</span> <span class="nn">bokeh.models.tools</span> <span class="k">import</span> <span class="n">HoverTool</span>
+<span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="k">import</span> <span class="n">Spectral7</span>
+<span class="kn">from</span> <span class="nn">bokeh.transform</span> <span class="k">import</span> <span class="n">factor_cmap</span>
+<span class="kn">from</span> <span class="nn">bokeh.core.properties</span> <span class="k">import</span> <span class="n">value</span>
+<span class="n">output_notebook</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+
+    <div class="bk-root">
+        <a href="https://bokeh.pydata.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
+        <span id="d9cbdfb7-c79e-48f0-b4c8-1a6e5749a14f">Loading BokehJS ...</span>
+    </div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+
+<div id="ba628c9d-5a7e-495a-b779-a51214f8c3d6"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#ba628c9d-5a7e-495a-b779-a51214f8c3d6');
+
+(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  var force = true;
+
+  if (typeof (root._bokeh_onload_callbacks) === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+  var JS_MIME_TYPE = 'application/javascript';
+  var HTML_MIME_TYPE = 'text/html';
+  var EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  var CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    var script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    var cell = handle.cell;
+
+    var id = cell.output_area._bokeh_element_id;
+    var server_id = cell.output_area._bokeh_server_id;
+    // Clean up Bokeh references
+    if (id != null && id in Bokeh.index) {
+      Bokeh.index[id].model.document.clear();
+      delete Bokeh.index[id];
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      var cmd = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd, {
+        iopub: {
+          output: function(msg) {
+            var id = msg.content.text.trim();
+            if (id in Bokeh.index) {
+              Bokeh.index[id].model.document.clear();
+              delete Bokeh.index[id];
+            }
+          }
+        }
+      });
+      // Destroy server and session
+      var cmd = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    var output_area = handle.output_area;
+    var output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
+      return
+    }
+
+    var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      var bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      var script_attrs = bk_div.children[0].attributes;
+      for (var i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      var toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    var events = require('base/js/events');
+    var OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+
+  
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  var NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded() {
+    var el = document.getElementById("d9cbdfb7-c79e-48f0-b4c8-1a6e5749a14f");
+    if (el != null) {
+      el.textContent = "BokehJS is loading...";
+    }
+    if (root.Bokeh !== undefined) {
+      if (el != null) {
+        el.textContent = "BokehJS " + root.Bokeh.version + " successfully loaded.";
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(display_loaded, 100)
+    }
+  }
+
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) { callback() });
+    }
+    finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.info("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(js_urls, callback) {
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.log("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.log("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = js_urls.length;
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      var s = document.createElement('script');
+      s.src = url;
+      s.async = false;
+      s.onreadystatechange = s.onload = function() {
+        root._bokeh_is_loading--;
+        if (root._bokeh_is_loading === 0) {
+          console.log("Bokeh: all BokehJS libraries loaded");
+          run_callbacks()
+        }
+      };
+      s.onerror = function() {
+        console.warn("failed to load library " + url);
+      };
+      console.log("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.getElementsByTagName("head")[0].appendChild(s);
+    }
+  };var element = document.getElementById("d9cbdfb7-c79e-48f0-b4c8-1a6e5749a14f");
+  if (element == null) {
+    console.log("Bokeh: ERROR: autoload.js configured with elementid 'd9cbdfb7-c79e-48f0-b4c8-1a6e5749a14f' but no matching script tag was found. ")
+    return false;
+  }
+
+  var js_urls = ["https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-gl-0.13.0.min.js"];
+
+  var inline_js = [
+    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+    
+    function(Bokeh) {
+      
+    },
+    function(Bokeh) {
+      console.log("Bokeh: injecting CSS: https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css");
+      Bokeh.embed.inject_css("https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css");
+      console.log("Bokeh: injecting CSS: https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.css");
+      Bokeh.embed.inject_css("https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.css");
+      console.log("Bokeh: injecting CSS: https://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.css");
+      Bokeh.embed.inject_css("https://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.css");
+    }
+  ];
+
+  function run_inline_js() {
+    
+    if ((root.Bokeh !== undefined) || (force === true)) {
+      for (var i = 0; i < inline_js.length; i++) {
+        inline_js[i].call(root, root.Bokeh);
+      }if (force === true) {
+        display_loaded();
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      var cell = $(document.getElementById("d9cbdfb7-c79e-48f0-b4c8-1a6e5749a14f")).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.log("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(js_urls, function() {
+      console.log("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get data</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://paperswithcode.com/sota/image-classification-on-imagenet"</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">content</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># preprocess data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">"evaluation-table-data"</span><span class="p">)</span><span class="o">.</span><span class="n">string</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert_num</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">None</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s2">"M"</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="mf">1e6</span>
+    <span class="k">elif</span> <span class="n">d</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"%"</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="k">return</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">parse_fn</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'model'</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'method'</span><span class="p">]</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'nparam'</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_num</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'metrics'</span><span class="p">][</span><span class="s1">'Number of params'</span><span class="p">])</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'metrics'</span><span class="p">][</span><span class="s1">'Number of params'</span><span class="p">]</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'Top1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_num</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'metrics'</span><span class="p">][</span><span class="s1">'Top 1 Accuracy'</span><span class="p">])</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'Top5'</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_num</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'metrics'</span><span class="p">][</span><span class="s1">'Top 5 Accuracy'</span><span class="p">])</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'evaluation_date'</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"-"</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">:]</span>
+  <span class="n">d</span><span class="p">[</span><span class="s1">'shortname'</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">'model'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"-"</span><span class="p">,</span><span class="s2">" "</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="k">return</span> <span class="n">d</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">parse_fn</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'nparam'</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s2">"rad"</span><span class="p">,</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'nparam'</span><span class="p">]</span><span class="o">/</span><span class="mf">1e6</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'year'</span><span class="p">])</span>
+
+<span class="n">years</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># https://programminghistorian.org/en/lessons/visualizing-with-bokeh</span>
+
+<span class="n">df_clean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Top1'</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+
+<span class="n">dfs</span> <span class="o">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span> 
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">x_axis_type</span><span class="o">=</span><span class="s1">'log'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"ImageNet Challenge Benchmark"</span><span class="p">)</span>
+
+<span class="n">color_map</span> <span class="o">=</span> <span class="n">factor_cmap</span><span class="p">(</span><span class="n">field_name</span><span class="o">=</span><span class="s1">'year'</span><span class="p">,</span>
+                    <span class="n">palette</span><span class="o">=</span><span class="n">Spectral7</span><span class="p">,</span> <span class="n">factors</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">dfs</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'nparam'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">'Top1'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color_map</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">'rad'</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s1">'year'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">hover</span> <span class="o">=</span> <span class="n">HoverTool</span><span class="p">()</span>
+<span class="n">hover</span><span class="o">.</span><span class="n">tooltips</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'model'</span><span class="p">,</span><span class="s1">'@model'</span><span class="p">),(</span><span class="s1">'Top5'</span><span class="p">,</span><span class="s1">'@Top5'</span><span class="p">)]</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_tools</span><span class="p">(</span><span class="n">hover</span><span class="p">)</span>
+
+<span class="c1"># labels = LabelSet(x='nparam', y='Top1', x_offset=-20, y_offset=1, source=dfs, text='shortname', text_font_size="8pt")</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s1">'bottom_left'</span>
+<span class="n">p</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="s1">'horizontal'</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">"Top 1 Accuracy [%]"</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">"Model Size [Number of Parameters]"</span>
+<span class="c1"># p.add_layout(labels)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+
+
+
+
+
+
+  <div class="bk-root" id="b2908679-05b6-4b43-b129-ab1b9b27800c"></div>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+
+<div id="617ab41a-a71c-4904-a301-b5f4c781f68e"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#617ab41a-a71c-4904-a301-b5f4c781f68e');
+(function(root) {
+  function embed_document(root) {
+    
+  var docs_json = {"01560512-d7f4-4cf4-8f9c-61d0ce56be5d":{"roots":{"references":[{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1e8737bf-d2ee-4fee-92f3-3bee27dc4edb","type":"PanTool"},{"id":"1791280e-9f95-4de7-9e17-0c1550052ce4","type":"WheelZoomTool"},{"id":"1da7ca90-8766-4367-8eb0-6ca08b5d3c1b","type":"BoxZoomTool"},{"id":"7fa505a0-3bc8-4f14-948c-f08c51e0e865","type":"SaveTool"},{"id":"1f64c5ff-47c2-44b9-8cd8-c836d2b29222","type":"ResetTool"},{"id":"1336bbd0-163f-4947-a6ab-819cf21511a0","type":"HelpTool"},{"id":"5b71a2ea-1a86-41d0-bcac-302ea65f6e75","type":"HoverTool"}]},"id":"d0a2730e-3306-4f61-889d-15c9832cc4a4","type":"Toolbar"},{"attributes":{"plot":null,"text":"ImageNet Challenge Benchmark"},"id":"9f6f0906-34ce-475d-b34d-16969f70e70d","type":"Title"},{"attributes":{"plot":{"id":"5f416728-f48f-4b70-abf8-65ced16f3b3f","subtype":"Figure","type":"Plot"},"ticker":{"id":"f8d0ff20-ea1c-489c-98ef-d54eb60717b6","type":"LogTicker"}},"id":"61b8bce0-1e71-4344-85cd-8f3ffd6680fd","type":"Grid"},{"attributes":{"axis_label":"Top 1 Accuracy [%]","formatter":{"id":"2af9df9b-ccc3-4f78-bc37-c640e548652a","type":"BasicTickFormatter"},"plot":{"id":"5f416728-f48f-4b70-abf8-65ced16f3b3f","subtype":"Figure","type":"Plot"},"ticker":{"id":"6770b8a5-cfff-4b2b-9d27-d16dc3a5ce65","type":"BasicTicker"}},"id":"993b25b6-84ee-4842-bc39-5cd832eb09cd","type":"LinearAxis"},{"attributes":{},"id":"8a0c523a-90e9-496b-b0b2-2a4e4419b854","type":"UnionRenderers"},{"attributes":{},"id":"6770b8a5-cfff-4b2b-9d27-d16dc3a5ce65","type":"BasicTicker"},{"attributes":{"dimension":1,"plot":{"id":"5f416728-f48f-4b70-abf8-65ced16f3b3f","subtype":"Figure","type":"Plot"},"ticker":{"id":"6770b8a5-cfff-4b2b-9d27-d16dc3a5ce65","type":"BasicTicker"}},"id":"8120756c-ad19-409e-87e4-5940fc917478","type":"Grid"},{"attributes":{"source":{"id":"9625cb0e-fb28-41b5-9d64-37dfff2ddd72","type":"ColumnDataSource"}},"id":"b601dca4-9ca6-4600-95ff-748484169ff8","type":"CDSView"},{"attributes":{},"id":"c1354f6c-310f-46de-8e4b-61ab9d5bc2d3","type":"Selection"},{"attributes":{"callback":null,"renderers":"auto","tooltips":[["model","@model"],["Top5","@Top5"]]},"id":"5b71a2ea-1a86-41d0-bcac-302ea65f6e75","type":"HoverTool"},{"attributes":{"data_source":{"id":"9625cb0e-fb28-41b5-9d64-37dfff2ddd72","type":"ColumnDataSource"},"glyph":{"id":"a0764d2e-5a5f-4156-b161-0d0f8a1d3be5","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"07267b41-5090-481f-8a94-5384dd1fd025","type":"Circle"},"selection_glyph":null,"view":{"id":"b601dca4-9ca6-4600-95ff-748484169ff8","type":"CDSView"}},"id":"b5f70f62-c0fa-4345-a14f-596fa3096076","type":"GlyphRenderer"},{"attributes":{},"id":"2af9df9b-ccc3-4f78-bc37-c640e548652a","type":"BasicTickFormatter"},{"attributes":{"ticker":null},"id":"2aad92f0-f76e-48c1-820e-67d57705171c","type":"LogTickFormatter"},{"attributes":{"below":[{"id":"820e9f0d-1209-41f4-8df3-beeda608642a","type":"LogAxis"}],"left":[{"id":"993b25b6-84ee-4842-bc39-5cd832eb09cd","type":"LinearAxis"}],"plot_height":400,"plot_width":700,"renderers":[{"id":"820e9f0d-1209-41f4-8df3-beeda608642a","type":"LogAxis"},{"id":"61b8bce0-1e71-4344-85cd-8f3ffd6680fd","type":"Grid"},{"id":"993b25b6-84ee-4842-bc39-5cd832eb09cd","type":"LinearAxis"},{"id":"8120756c-ad19-409e-87e4-5940fc917478","type":"Grid"},{"id":"a924f177-fa82-4aad-aee2-75f63ad8e0f1","type":"BoxAnnotation"},{"id":"bf007bf7-d94d-4dbf-8e84-ef2232b9b8e4","type":"Legend"},{"id":"b5f70f62-c0fa-4345-a14f-596fa3096076","type":"GlyphRenderer"}],"title":{"id":"9f6f0906-34ce-475d-b34d-16969f70e70d","type":"Title"},"toolbar":{"id":"d0a2730e-3306-4f61-889d-15c9832cc4a4","type":"Toolbar"},"x_range":{"id":"d2bcb79a-c289-4e00-bf0b-9c46bfe57ec1","type":"DataRange1d"},"x_scale":{"id":"b9fd6658-2df4-4a96-9f99-3491fa448455","type":"LogScale"},"y_range":{"id":"f598f2f5-07e6-4171-a373-7893c19a7173","type":"DataRange1d"},"y_scale":{"id":"9f88f264-aaff-4b53-a687-2b29fa58485f","type":"LinearScale"}},"id":"5f416728-f48f-4b70-abf8-65ced16f3b3f","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1e8737bf-d2ee-4fee-92f3-3bee27dc4edb","type":"PanTool"},{"attributes":{"callback":null,"data":{"Top1":{"__ndarray__":"ZmZmZmamT0AAAAAAAKBSQJqZmZmZmVJAMzMzMzNzUUAzMzMzM7NTQAAAAAAAkFNAMzMzMzOzUkAAAAAAAMBTQGZmZmZmBlRAmpmZmZk5VEAzMzMzM1NUQGZmZmZmhlNAw/UoXI+iU0DNzMzMzFxUQBSuR+F6BFRAmpmZmZm5VEDNzMzMzKxUQM3MzMzMrFRAuB6F61FYVEDNzMzMzCxTQArXo3A9SlNAzczMzMzMUkCamZmZmblSQJqZmZmZ+VRAzczMzMwMVUAzMzMzMxNVQGZmZmZmRlVAmpmZmZlZVUBmZmZmZuZSQDMzMzMzE1NAZmZmZmbmUkDNzMzMzMxSQDMzMzMzE1NAmpmZmZk5U0AAAAAAAEBTQDMzMzMz81JAmpmZmZmZVUCamZmZmblTQGZmZmZmxlNAMzMzMzPzU0BmZmZmZkZUQAAAAAAAoFRAZmZmZmamVECamZmZmblUQAAAAAAAwFRAMzMzMzPTVEBmZmZmZuZUQM3MzMzM7FRAAAAAAAAAVUCamZmZmRlVQDMzMzMzs1NAMzMzMzPzU0A=","dtype":"float64","shape":[52]},"Top5":{"__ndarray__":"ZmZmZmYmVUAAAAAAAABXQJqZmZmZ+VZAmpmZmZl5VkCamZmZmZlXQM3MzMzMfFdAzczMzMwMV0AAAAAAAKBXQGZmZmZmxldAZmZmZmbmV0AzMzMzM/NXQK5H4XoUfldAPQrXo3CdV0D2KFyPwvVXQLgehetRuFdAzczMzMwMWEDNzMzMzAxYQM3MzMzMDFhA4XoUrkfxV0AzMzMzM1NXQOF6FK5HYVdAAAAAAAAgV0AAAAAAAAD4f2ZmZmZmJlhAzczMzMxMWEAAAAAAAEBYQAAAAAAAYFhAZmZmZmZmWEDNzMzMzCxXQAAAAAAAQFdAZmZmZmYmV0AAAAAAAAD4f83MzMzMTFdAmpmZmZlZV0AzMzMzM1NXQDMzMzMzM1dAAAAAAACAWEDNzMzMzIxXQGZmZmZmpldAmpmZmZm5V0AAAAAAAOBXQGZmZmZmJlhAMzMzMzMTWEAzMzMzMxNYQAAAAAAAIFhAzczMzMwsWEDNzMzMzCxYQDMzMzMzM1hAmpmZmZk5WEBmZmZmZkZYQJqZmZmZmVdAmpmZmZm5V0A=","dtype":"float64","shape":[52]},"index":[100,89,90,96,48,57,87,45,27,25,20,59,52,18,29,13,14,15,19,66,62,80,86,7,5,4,2,1,77,70,78,81,69,65,64,73,0,47,44,36,22,17,16,12,11,10,9,8,6,3,49,35],"model":["AlexNet - 7CNNs","VGG-19","VGG-16","Inception V1","Inception V3","ResNet-101","Inception V2","Xception","Inception ResNet V2","ResNeXt-101  64x4","PolyNet","WRN-50-2-bottleneck","DenseNet-201","DPN-131 (320x320, Mean-Max Pooling)","DPN-131 (224x224)","PNASNet-5","NASNET-A(6)","SENet-154","DPN-131 (320x320)","MnasNet-A3","ResNet-50-D","MnasNet-A1","FBNet-C","AmoebaNet-A"," ResNeXt-101 32\u00d716d","GPIPE","ResNeXt-101 32x32d","ResNeXt-101 32x48d","MnasNet-A2","SCARLET-B","SCARLET-C","MobileNet V3-Large 1.0","EfficientNet-B0","SCARLET-A","MixNet-M","MixNet-S","FixResNeXt-101 32x48d","MixNet-L","FixResNet-50","EfficientNet-B2","EfficientNet-B3","FixResNet-50 Billion","EfficientNet-B4","Oct-ResNet-152 (SE)","MultiGrain SENet154 (400px)","EfficientNet-B5","MultiGrain PNASNet (500px)","FixPNASNet-5","EfficientNet-B6","EfficientNet-B7","EfficientNet-B1","FixResNet-50 CutMix"],"nparam":{"__ndarray__":"AAAAADicjEEAAAAAiCqhQQAAAABtc6BBAAAAANASU0EAAAAAjLJ2QQAAAADQEoNBAAAAAMBcZUEAAAAAaL51QQAAAACGm4pBAAAAAIruk0EAAAAAPO+VQQAAAIBSbZBBAAAAANASc0EAAAAA0BKTQQAAAADQEpNBAAAAgCCHlEEAAAAAITiVQQAAAACRZ6FBAAAAANASk0EAAAAAINZTQQAAAACE13dBAAAAADDBTUEAAAAAGPtUQQAAAEBf9LtBAAAAAGkgp0EAAACgkpnAQQAAAICYxrtBAAAAoMS0yEEAAAAAgE9SQQAAAACoy1hBAAAAAGDjVkEAAAAAcJlUQQAAAADIN1RBAAAAAPiOWUEAAAAA0BJTQf/////PR09BAAAAoMS0yEEAAAAA6NhbQQAAAAAAanhBAAAAADCMYUEAAAAAYONmQQAAAAAAanhBAAAAAKweckEAAAAAtvKPQQAAAAAGgZRBAAAAADicfEEAAAAABoGUQQAAAIAgh5RBAAAAAAaBhEEAAAAApHiPQQAAAAAwwV1BAAAAAABqeEE=","dtype":"float64","shape":[52]},"rad":{"__ndarray__":"JHv7BOc8N0AAAAAAAABCQLJiCob6nkFA/O5jaTPVGkBck2fWaUUtQH7EIyxC+TJAOgacb3AUJEAVXHGqTKYsQD9SherpaDZANaFdoA5uO0AhhjKwZcY8QD7UkdXc5jhA/O5jaTPVKkD87mNpM9U6QPzuY2kz1TpAlxsFUUfWO0DiypMpTE08QNH6WsDjH0JA/O5jaTPVOkC0FjzhPF0bQAAAAAAAAC5A9k5zwrayF0D6gf6FeiQcQN2h7sEHPlBATb78R4DkRECDSH7aXLNRQHxVZ9q1MFBAx/NhFSKYVUCrxnQvakoaQPFHmw4YmB5AxbENHtVkHUCRYMfSruIbQCKAdm1GoBtAmH55wqwPH0D87mNpM9UaQCqSsm5TTBhAx/NhFSKYVUAVvdMgCzYgQJZtbBOdWy5ARWwkLusyIkCAOUIu3MgkQJZtbBOdWy5A9nSWzkQnKkDQPnjWWY44QE40zZUj0jtAK/yoXYJuMEBONM2VI9I7QJcbBVFH1jtACDmW3xysM0ASFFLxQl84QAfHyYXQwSBAlm1sE51bLkA=","dtype":"float64","shape":[52]},"shortname":["AlexNet","VGG","VGG","Inception","Inception","ResNet","Inception","Xception","Inception","ResNeXt","PolyNet","WRN","DenseNet","DPN","DPN","PNASNet","NASNET","SENet","DPN","MnasNet","ResNet","MnasNet","FBNet","AmoebaNet","","GPIPE","ResNeXt","ResNeXt","MnasNet","SCARLET","SCARLET","MobileNet","EfficientNet","SCARLET","MixNet","MixNet","FixResNeXt","MixNet","FixResNet","EfficientNet","EfficientNet","FixResNet","EfficientNet","Oct","MultiGrain","EfficientNet","MultiGrain","FixPNASNet","EfficientNet","EfficientNet","EfficientNet","FixResNet"],"size":["60M","144M","138M","5M","23.8M","40M","11.2M","22.8M","55.8M","83.6M","92M","68.9M","20M","80M","80M","86.1M","89M","146M","80M","5.2M","25M","3.9M","5.5M","469M","194M","557M","466M","829M","4.8M","6.5M","6.0M","5.4M","5.3M","6.7M","5.0M","4.1M","829M","7.3M","25.6M","9.2M","12M","25.6M","19M","67M","86M","30M","86M","86.1M","43M","66M","7.8M","25.6M"],"year":["12","14","14","14","15","15","15","16","16","16","16","16","16","17","17","17","17","17","17","18","18","18","18","18","18","18","18","18","18","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19","19"]},"selected":{"id":"c1354f6c-310f-46de-8e4b-61ab9d5bc2d3","type":"Selection"},"selection_policy":{"id":"8a0c523a-90e9-496b-b0b2-2a4e4419b854","type":"UnionRenderers"}},"id":"9625cb0e-fb28-41b5-9d64-37dfff2ddd72","type":"ColumnDataSource"},{"attributes":{},"id":"1791280e-9f95-4de7-9e17-0c1550052ce4","type":"WheelZoomTool"},{"attributes":{"overlay":{"id":"a924f177-fa82-4aad-aee2-75f63ad8e0f1","type":"BoxAnnotation"}},"id":"1da7ca90-8766-4367-8eb0-6ca08b5d3c1b","type":"BoxZoomTool"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"field":"year","transform":{"id":"46333e4e-6847-4caa-804f-b3c16e6b131b","type":"CategoricalColorMapper"}},"line_alpha":{"value":0.5},"line_color":{"field":"year","transform":{"id":"46333e4e-6847-4caa-804f-b3c16e6b131b","type":"CategoricalColorMapper"}},"size":{"field":"rad","units":"screen"},"x":{"field":"nparam"},"y":{"field":"Top1"}},"id":"a0764d2e-5a5f-4156-b161-0d0f8a1d3be5","type":"Circle"},{"attributes":{},"id":"7fa505a0-3bc8-4f14-948c-f08c51e0e865","type":"SaveTool"},{"attributes":{},"id":"1f64c5ff-47c2-44b9-8cd8-c836d2b29222","type":"ResetTool"},{"attributes":{},"id":"1336bbd0-163f-4947-a6ab-819cf21511a0","type":"HelpTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"a924f177-fa82-4aad-aee2-75f63ad8e0f1","type":"BoxAnnotation"},{"attributes":{"callback":null},"id":"d2bcb79a-c289-4e00-bf0b-9c46bfe57ec1","type":"DataRange1d"},{"attributes":{"axis_label":"Model Size [Number of Parameters]","formatter":{"id":"2aad92f0-f76e-48c1-820e-67d57705171c","type":"LogTickFormatter"},"plot":{"id":"5f416728-f48f-4b70-abf8-65ced16f3b3f","subtype":"Figure","type":"Plot"},"ticker":{"id":"f8d0ff20-ea1c-489c-98ef-d54eb60717b6","type":"LogTicker"}},"id":"820e9f0d-1209-41f4-8df3-beeda608642a","type":"LogAxis"},{"attributes":{"num_minor_ticks":10},"id":"f8d0ff20-ea1c-489c-98ef-d54eb60717b6","type":"LogTicker"},{"attributes":{"items":[{"id":"64cd851f-2685-49dd-8e2c-e18d92f6fec6","type":"LegendItem"}],"location":"bottom_left","orientation":"horizontal","plot":{"id":"5f416728-f48f-4b70-abf8-65ced16f3b3f","subtype":"Figure","type":"Plot"}},"id":"bf007bf7-d94d-4dbf-8e84-ef2232b9b8e4","type":"Legend"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"field":"rad","units":"screen"},"x":{"field":"nparam"},"y":{"field":"Top1"}},"id":"07267b41-5090-481f-8a94-5384dd1fd025","type":"Circle"},{"attributes":{"factors":["12","14","15","16","17","18","19"],"palette":["#3288bd","#99d594","#e6f598","#ffffbf","#fee08b","#fc8d59","#d53e4f"]},"id":"46333e4e-6847-4caa-804f-b3c16e6b131b","type":"CategoricalColorMapper"},{"attributes":{},"id":"9f88f264-aaff-4b53-a687-2b29fa58485f","type":"LinearScale"},{"attributes":{"callback":null},"id":"f598f2f5-07e6-4171-a373-7893c19a7173","type":"DataRange1d"},{"attributes":{"label":{"field":"year"},"renderers":[{"id":"b5f70f62-c0fa-4345-a14f-596fa3096076","type":"GlyphRenderer"}]},"id":"64cd851f-2685-49dd-8e2c-e18d92f6fec6","type":"LegendItem"},{"attributes":{},"id":"b9fd6658-2df4-4a96-9f99-3491fa448455","type":"LogScale"}],"root_ids":["5f416728-f48f-4b70-abf8-65ced16f3b3f"]},"title":"Bokeh Application","version":"0.13.0"}};
+  var render_items = [{"docid":"01560512-d7f4-4cf4-8f9c-61d0ce56be5d","roots":{"5f416728-f48f-4b70-abf8-65ced16f3b3f":"b2908679-05b6-4b43-b129-ab1b9b27800c"}}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        embed_document(root);
+        clearInterval(timer);
+      }
+      attempts++;
+      if (attempts > 100) {
+        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+        clearInterval(timer);
+      }
+    }, 10, root)
+  }
+})(window);
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/benchmark/" rel="tag">benchmark</a></li>
+            <li><a class="tag p-category" href="../../categories/imagenet/" rel="tag">imagenet</a></li>
+            <li><a class="tag p-category" href="../../categories/research/" rel="tag">research</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../refinance_a_loan/" rel="prev" title="Refinance Analysis">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><div class="fb-comments" data-href="https://jiayiliu.github.com/posts/imagenet-benchmark/" data-width="470"></div>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><div id="fb-root"></div>
+<script>
+    // thank lxml for this
+    $('.fb-comments-count').each(function(i, obj) {
+        var url = obj.attributes['data-url'].value;
+        // change here if you dislike the default way of displaying
+        // this
+        obj.innerHTML = '<fb:comments-count href="' + url + '"></fb:comments-count> comments';
+    });
+
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128364527-2');
+</script>
+</body>
+</html>

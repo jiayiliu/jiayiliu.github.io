@@ -8,3 +8,5 @@ output
 nikolaserve.pid
 .ipynb_checkpoints/
 .doit*
+
+posts/tmp/

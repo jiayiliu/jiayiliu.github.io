@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/benchmark.xml</loc>
-  <lastmod>2019-09-13T06:03:00Z</lastmod>
+  <lastmod>2019-09-15T04:45:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_life.xml</loc>
@@ -22,12 +22,24 @@
   <lastmod>2019-09-13T06:02:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://jiayiliu.github.com/categories/colab.xml</loc>
+  <lastmod>2019-10-30T06:30:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/compression.xml</loc>
+  <lastmod>2019-10-30T06:01:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://jiayiliu.github.com/categories/imagenet.xml</loc>
-  <lastmod>2019-09-13T06:03:00Z</lastmod>
+  <lastmod>2019-09-15T04:45:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/keras.xml</loc>
   <lastmod>2019-09-13T06:02:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/lite.xml</loc>
+  <lastmod>2019-10-30T06:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/profiling.xml</loc>
@@ -39,18 +51,18 @@
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/research.xml</loc>
-  <lastmod>2019-09-13T06:03:00Z</lastmod>
+  <lastmod>2019-09-15T04:45:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/tensorflow.xml</loc>
-  <lastmod>2019-09-13T06:03:00Z</lastmod>
+  <lastmod>2019-10-30T06:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/rss.xml</loc>
-  <lastmod>2019-09-13T06:03:00Z</lastmod>
+  <lastmod>2019-10-30T06:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/sitemap.xml</loc>
-  <lastmod>2019-09-13T06:03:00Z</lastmod>
+  <lastmod>2019-10-30T06:30:00Z</lastmod>
  </sitemap>
 </sitemapindex>

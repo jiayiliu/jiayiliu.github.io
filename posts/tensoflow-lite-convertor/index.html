@@ -741,10 +741,11 @@ Call initializer instance with the dtype argument instead of passing it to the c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [0]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%capture</span> convert_log
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%capture</span> convert_log 
+<span class="c1"># output has been cleared</span>
 <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">xdata</span> <span class="ow">in</span> <span class="n">data_choice</span><span class="p">:</span>
   <span class="k">for</span> <span class="n">xopt</span> <span class="ow">in</span> <span class="n">opt_choice</span><span class="p">:</span>
@@ -776,509 +777,6 @@ Call initializer instance with the dtype argument instead of passing it to the c
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/lite/python/util.py:249: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use `tf.compat.v1.graph_util.convert_variables_to_constants`
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/framework/graph_util_impl.py:277: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use `tf.compat.v1.graph_util.extract_sub_graph`
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-INFO:tensorflow:Froze 16 variables.
-INFO:tensorflow:Converted 16 variables to const ops.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1339,10 +837,10 @@ INFO:tensorflow:Converted 16 variables to const ops.
 
 
 
-<div id="746b6ec7-1ad4-4fe7-8010-c189a5e991c9"></div>
+<div id="794a307c-bf54-4c2a-8954-1e10defad0a8"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#746b6ec7-1ad4-4fe7-8010-c189a5e991c9');
+var element = $('#794a307c-bf54-4c2a-8954-1e10defad0a8');
 require.config({
     paths: {
         DT: '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min',
@@ -6362,11 +5860,24 @@ require.config({
 </h3>
 <h4 id="Take-aways">Take-aways<a class="anchor-link" href="#Take-aways">¶</a>
 </h4>
+<p>Now, let's take another look of the workflow provided by TF.</p>
+<p><img src="https://www.tensorflow.org/lite/performance/images/optimization.jpg" alt="Lite convert decision map"></p>
 <ul>
-<li>No data, no optimization, ops and types doesn't matter (except using int8/uint8 will crash).  It will create a float32 tflite for runtime.</li>
+<li>Optimization types are not fully implemented, see [here].(<a href="https://github.com/tensorflow/tensorflow/blob/570206441717511720fdae9ac58dac16cc1d348a/tensorflow/lite/python/lite.py#L96">https://github.com/tensorflow/tensorflow/blob/570206441717511720fdae9ac58dac16cc1d348a/tensorflow/lite/python/lite.py#L96</a>)</li>
+<li>
+<p>No data, no optimization, ops and types doesn't matter except crashing cases (e.g. int).  It will create a float32 tflite for runtime. This corresponds to <code>N</code> to <code>Optimzie model?</code>.</p>
+<ul>
+<li>Exception case 1: using int in types/ops</li>
+<li>Exception case 2: with data, and set ops to int, (types is int or none).</li>
+</ul>
+</li>
+<li>
+<p>With optimization and types of <code>float16</code>, it will reduce to half size.</p>
+</li>
 <li>With optimization (and without float16), some weights are quantized to int8.</li>
 <li>With data and optimization, weights are in int type. However int8 is not strictly enforced.</li>
 <li>When ops is <code>int8</code>, data type needs to be <code>int8</code>.</li>
+<li>int8 and uint8 are quite different.</li>
 </ul>
 <h4 id="Remaining-mysterious">Remaining mysterious<a class="anchor-link" href="#Remaining-mysterious">¶</a>
 </h4>
@@ -6374,14 +5885,6 @@ require.config({
 <li>What's the difference between <code>select</code> and <code>builtin</code>?</li>
 <li>What's the <code>string</code> or <code>none</code> op type?</li>
 </ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="An-unexpected-problem">An unexpected problem<a class="anchor-link" href="#An-unexpected-problem">¶</a>
 </h3>
 <p>If you check the source code](<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/kernels/kernel_util.cc#L100">https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/kernels/kernel_util.cc#L100</a>), it is under the <code>GetQuantizedConvolutionMultipler</code> function.  So there is some interesting conversion for the fully connected layer.  To save the trouble and focus on our original goal.</p>

@@ -21,3 +21,10 @@ Build by [Nikola](https://getnikola.com).
 1. Add `"<!-- TEASER_END -->\n"` to show something in the index page.
 1. `nikola build` to build and test
 1. `nikola github_deploy` to commit and push to github.io page
+
+
+## Google Colab access
+
+Most documents are developed in Google Colab.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/pages/index.ipynb)

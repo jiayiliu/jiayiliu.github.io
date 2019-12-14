@@ -167,19 +167,21 @@ navbar-dark bg-dark
 </h3>
 <p>Unfortunately the PocketFlow has compatability issues with Tensorflow newer versions.  To be on the safe side, use <a href="https://www.docker.com/">Docker</a>.  I will create a brief overview of the solution:</p>
 <ol>
-<li>Create a <code>./Dockerfile</code> as below
-```
-FROM tensorflow/tensorflow:1.10-gpu-py3</li>
-</ol>
-<p>WORKDIR /tf
+<li>
+<p>Create a <code>./Dockerfile</code> as below</p>
+
+<pre><code>FROM tensorflow/tensorflow:1.10.1-gpu-py3
+
+WORKDIR /tf
 ADD * /tf/   # this is the PocketFlow folder
-RUN pip install -r requirement.txt</p>
-<p>VOLUME /output  # to save outputs, change your code / flags accordingly
-VOLUME /data    # input path, don't put your data in the working folder.</p>
-<p>CMD ./script/run_local.sh nets/<model><em>at</em><dataset>_run.py <additional flags> ...
-```</additional></dataset></model></p>
-<ol>
-<li>Build the docker as <code>docker build -t &lt;your image name&gt; .</code>
+
+VOLUME /output  # to save outputs, change your code / flags accordingly
+VOLUME /data    # input path, don't put your data in the working folder.
+
+CMD ./script/run_local.sh nets/&lt;model&gt;_at_&lt;dataset&gt;_run.py &lt;additional flags&gt; ...</code></pre>
+</li>
+<li>
+<p>Build the docker as <code>docker build -t &lt;your image name&gt; .</code></p>
 </li>
 <li>To run your docker with <code>bash</code>, run <code>docker run --gpus 0 --rm -it -v &lt;your data folder&gt;:/data -v &lt;your output folder&gt;:/output &lt;your image name&gt; bash</code>
 </li>

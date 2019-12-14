@@ -109,64 +109,7 @@ navbar-dark bg-dark
 <li>There are some problems with TF versions.</li>
 </ol>
 <p>I am trying to address the above problems, and in the article, I am trying to provide a userful guidance to compress your own model.</p>
-<h3 id=""><a class="anchor-link" href="posts/pocketflow-intro/">¶</a></h3>
-<h3 id="Steps-to-build-a-training/compression-pipeline">Steps to build a training/compression pipeline<a class="anchor-link" href="posts/pocketflow-intro/#Steps-to-build-a-training/compression-pipeline">¶</a>
-</h3>
-<ol>
-<li>
-<p>Clone the repo</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:Tencent/PocketFlow.git
- <span class="nb">cd</span> PocketFlow
-</pre></div>
-<p>From now on, the working directory is the repo folder.</p>
-</li>
-<li>
-<p>Set up data input pipeline</p>
-<p>a. Create <code>path.conf</code>, a template is at <code>./path.conf.template</code>.  This file specifies the data path as <code>data_dir_local_&lt;dataset&gt; = ...</code>.  The name <code>&lt;dataset&gt;</code> is important, and will be used in below.</p>
-<p>b. Create <code>Dataset</code> class for your data at <code>./datasets/&lt;your dataset classe&gt;.py</code>.  The name of the class and the file name are not important, you will get the file path as <code>FLAGS.data_dir_local</code> without the <code>&lt;dataset&gt;</code> name here.  Importantly, you need inherate the <code>AbstractDataset</code> and define the following functions and properties:</p>
-<ul>
-<li><code>batch_size</code></li>
-<li>
-<code>dataset_fn</code>: to create a tf Dataset object.</li>
-<li>
-<code>parse_fn</code>: to parse the dataset, and need to accept an argument <code>is_train</code> to differentiate training and testing pipelines.</li>
-</ul>
-</li>
-<li>
-<p>Create your model</p>
-<p>a. Create <code>&lt;model&gt;_at_&lt;dataset&gt;.py</code>.  It is important to use the same <code>&lt;dataset&gt;</code> as used in step 1.  Defining <code>ModelHelper</code> class is critical.  Basically using existing code as a template is a good start.  For the minimum, you need to define your model in <code>forward_fn</code> and replace the <code>dataset</code> class with yours defined above.</p>
-<p>b. Create <code>&lt;model&gt;_at_&lt;dataset&gt;_run.py</code>.  It is important to use the same <code>&lt;dataset&gt;</code> as used in step 1.  In this file, basically you only need to replace the <code>ModelHelper</code> function from the file you defined.</p>
-</li>
-</ol>
-<h3 id="Training-and-compression">Training and compression<a class="anchor-link" href="posts/pocketflow-intro/#Training-and-compression">¶</a>
-</h3>
-<ul>
-<li>It is highly recommended to use <code>./script/run_local.sh nets/&lt;model&gt;_at_&lt;dataset&gt;_run.py</code> first to test your code and make sure PocketFlow can train it with full precision.</li>
-<li>The compression algorithms are under the name <code>learner</code>.  Find more information from the <a href="https://pocketflow.github.io/tutorial/">official documentation</a>.</li>
-<li>The optional arguments can be provided after the above running script.  Unfortunately the arguments are defined spreading the whole source codes with <a href="https://abseil.io/docs/python/guides/flags">FLAGS</a>.  Stay tuned, I will provide further guidance next time.</li>
-</ul>
-<h3 id="Fix-version-issues-with-Docker">Fix version issues with Docker<a class="anchor-link" href="posts/pocketflow-intro/#Fix-version-issues-with-Docker">¶</a>
-</h3>
-<p>Unfortunately the PocketFlow has compatability issues with Tensorflow newer versions.  To be on the safe side, use <a href="https://www.docker.com/">Docker</a>.  I will create a brief overview of the solution:</p>
-<ol>
-<li>Create a <code>./Dockerfile</code> as below
-```
-FROM tensorflow/tensorflow:1.10-gpu-py3</li>
-</ol>
-<p>WORKDIR /tf
-ADD * /tf/   # this is the PocketFlow folder
-RUN pip install -r requirement.txt</p>
-<p>VOLUME /output  # to save outputs, change your code / flags accordingly
-VOLUME /data    # input path, don't put your data in the working folder.</p>
-<p>CMD ./script/run_local.sh nets/<model><em>at</em><dataset>_run.py <additional flags> ...
-```</additional></dataset></model></p>
-<ol>
-<li>Build the docker as <code>docker build -t &lt;your image name&gt; .</code>
-</li>
-<li>To run your docker with <code>bash</code>, run <code>docker run --gpus 0 --rm -it -v &lt;your data folder&gt;:/data -v &lt;your output folder&gt;:/output &lt;your image name&gt; bash</code>
-</li>
-<li>To run your training script (indicated by <code>CMD</code> in the <code>Dockerfile</code>, use <code>docker run --gpus 0 --rm -v &lt;your data folder&gt;:/data -v &lt;your output folder&gt;:/output &lt;your image name&gt;</code>.</li>
-</ol>
+<p class="more"><a href="posts/pocketflow-intro/">Read more…</a></p>
 </div>
 </div>
 </div>
@@ -198,10 +141,10 @@ VOLUME /data    # input path, don't put your data in the working folder.</p>
 <h3 id="ML/DL">ML/DL<a class="anchor-link" href="posts/index-colab/#ML/DL">¶</a>
 </h3>
 <ul>
-<li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/tf_lite_explore.ipynb">Tensorflow Lite Explore</a></li>
+<li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/TF_Lite_Conversion_v1.ipynb">TF Lite Conversion Comparison</a></li>
 <li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/imagenet_benchmark.ipynb">ImageNet Challenge Benchmark</a></li>
 <li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/Warnings_for_TensorFlow_User.ipynb">Warnings for TensorFlow User</a></li>
-<li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/notebooks/Tensorflow%20Model%20Restore.ipynb">Reflection on Tensorflow Documentation by a short user journey</a></li>
+<li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/tf_lite_explore.ipynb">Reflection on Tensorflow Documentation by a short user journey</a></li>
 <li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/tensoflow-profiling.ipynb">Tensorflow Profiling</a></li>
 <li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/random-tests-for-keras.ipynb">Random Test for Keras</a></li>
 </ul>

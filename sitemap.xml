@@ -7,106 +7,122 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://jiayiliu.github.com/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2018/</loc>
-  <lastmod>2018-09-17T06:07:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2019/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/archive.html</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-12-14T08:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-12-14T08:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/benchmark/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_life/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-08-04T05:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_programming/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_tensorflow/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/categories/cat_tutorialdeep-learning/</loc>
+  <lastmod>2019-12-14T08:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/colab/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-10-30T06:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/compression/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-10-30T06:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/imagenet/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/keras/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/lite/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-10-30T06:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/categories/pocketflow/</loc>
+  <lastmod>2019-12-14T08:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/profiling/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/python/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/research/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/tensorflow/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/categories/tutorial/</loc>
+  <lastmod>2019-12-14T08:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/imagenet-benchmark/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-09-13T06:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/index-colab/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-10-30T06:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/posts/pocketflow-intro/</loc>
+  <lastmod>2019-12-14T08:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/random-tests-for-keras/</loc>
-  <lastmod>2018-09-17T06:07:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/refinance_a_loan/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-08-04T05:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-lite-convertor/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-10-30T06:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-lite/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-problem/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-profiling/</loc>
-  <lastmod>2019-12-10T07:48:00Z</lastmod>
+  <lastmod>2019-06-20T04:48:00Z</lastmod>
  </url>
 </urlset>

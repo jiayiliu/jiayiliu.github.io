@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+fb: http://ogp.me/ns/fb# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Conference review for model compression presented in NeurIPS 2019">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review of NeurIPS 2019 for Model Compression | Lab of Random</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://jiayiliu.github.com/posts/neurips2019/">
+<meta property="fb:app_id" content="321809675046639">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
+<link rel="prev" href="../index-colab/" title="Colab Index" type="text/html">
+<meta property="og:site_name" content="Lab of Random">
+<meta property="og:title" content="Review of NeurIPS 2019 for Model Compression">
+<meta property="og:url" content="https://jiayiliu.github.com/posts/neurips2019/">
+<meta property="og:description" content="Conference review for model compression presented in NeurIPS 2019">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-01-07T20:00:00-08:00">
+<meta property="article:tag" content="compression">
+<meta property="article:tag" content="neurips">
+<meta property="article:tag" content="notes">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="https://jiayiliu.github.com/">
+
+            <span id="blog-title">Lab of Random</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
+                </li>
+<li class="nav-item">
+<a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/index.ipynb" class="nav-link">Google Colab</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.ipynb" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Review of NeurIPS 2019 for Model Compression</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Jiayi (Jason) Liu
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-07T20:00:00-08:00" itemprop="datePublished" title="2020-01-07 20:00">2020-01-07 20:00</time></a>
+            </p>
+                <p class="commentline">
+        
+<span class="fb-comments-count" data-url="/posts/neurips2019/">
+
+
+            
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">Source</a></p>
+
+        </span></p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Review-of-NeurIPS-2019-for-Model-Compression">Review of NeurIPS 2019 for Model Compression<a class="anchor-link" href="#Review-of-NeurIPS-2019-for-Model-Compression">¶</a>
+</h2>
+<h3 id="Sessions">Sessions<a class="anchor-link" href="#Sessions">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="https://nips.cc/Conferences/2019/Schedule?showParentSession=15511">Deep Learning -- Efficient Inference Methods</a></p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/neurips-19">Workshop on Energy Efficient Machine Learning and Cognitive Computing</a></p>
+</li>
+</ul>
+<h3 id="Workshop-keynotes">Workshop keynotes<a class="anchor-link" href="#Workshop-keynotes">¶</a>
+</h3>
+<!-- TEASER_END -->
+
+<ul>
+<li><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-sze-keynote.pdf">Efficient Computing for AI and Robotics</a></li>
+<li><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-marculescu-talk.pdf">Putting the “Machine” Back in Machine Learning: The Case for Hardware-ML Model Co-design</a></li>
+<li><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-delp-keynote.pdf">Cheap, Fast, and Low Power Deep Learning: I need it now!</a></li>
+<li><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-verma-talk.pdf">Advances and Prospects for In-memory Computing</a></li>
+<li><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-zhang-talk.pdf">Algorithm-Accelerator Co-Design for Neural Network Specialization</a></li>
+<li><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-feris-talk.pdf">Adaptive Multi-Task Neural Networks for Efficient Inference</a></li>
+</ul>
+<h3 id="Pruning">Pruning<a class="anchor-link" href="#Pruning">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://papers.nips.cc/paper/8464-channel-gating-neural-networks">Channel Gating Neural Networks</a>: proposes an effective way to create dynamically pruned network for inference by channel gating. It provides a clear instruction to design the network architecture and to train such network. The inference stage requires carefully implemented gating function to reduce the computation (therefore better efficiency).</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/9521-autoprune-automatic-network-pruning-by-regularizing-auxiliary-parameters">AutoPrune: Automatic Network Pruning by Regularizing Auxiliary Parameters</a>: trains an additional set of parameters to prune the underlying network weights (similar to gating).</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8486-gate-decorator-global-filter-pruning-method-for-accelerating-deep-convolutional-neural-networks">Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks</a>: provides a detailed solution for effective channel pruning.  Using a trainable weight factor to guide pruning has been studied in <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.pdf">Liu et al. 2017</a>.  Using Taylor expansion to predict the importance has been explored in <a href="https://arxiv.org/abs/1611.06440">Molchanov et al. 2016</a>.  This paper combined the techniques together along with tweaks on skip connection and batch normalization to form a concrete solution for filter/channel pruning.</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8364-network-pruning-via-transformable-architecture-search">Network Pruning via Transformable Architecture Search</a>: searches for the best width and depth using NAS.  It is not a typical NAS, instead, it represents the network depth and width probabilistically and learn them gradually via validation set to form the final pruned model with distillation.</p>
+</li>
+</ul>
+<h3 id="Low-rank">Low rank<a class="anchor-link" href="#Low-rank">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://papers.nips.cc/paper/8860-singleshot-a-scalable-tucker-tensor-decomposition">Singleshot : a scalable Tucker tensor decomposition</a>: proposes efficient algorithms for Tucker decomposition.  The decomposition can improve model inference speed and reduce model size.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-15.pdf">[w]Trained Rank Pruning for Efficient Deep Neural Networks</a>: applies SGD on decomposed matrices periodically to obtain a low-rank network.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-13.pdf">[w] Pushing the limits of RNN Compression</a>: uses Kronecker products to decompose matrices in RNN layers and obtains 15x or more compression.</p>
+</li>
+</ul>
+<h3 id="Quantization">Quantization<a class="anchor-link" href="#Quantization">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://papers.nips.cc/paper/8736-hybrid-8-bit-floating-point-hfp8-training-and-inference-for-deep-neural-networks">Hybrid 8-bit Floating Point (HFP8) Training and Inference for Deep Neural Networks</a>: proposes a new float 8 representation to effectively quantize DNN.</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/9052-the-synthesis-of-xnor-recurrent-neural-networks-with-stochastic-logic">The Synthesis of XNOR Recurrent Neural Networks with Stochastic Logic</a>: fully adopts XNOR operations for the LSTM-based RNN model.</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8647-metaquant-learning-to-quantize-by-learning-to-penetrate-non-differentiable-quantization">MetaQuant: Learning to Quantize by Learning to Penetrate Non-differentiable Quantization</a>: learns the mapping for gradient update for quantized model instead of using a pre-defined schema (e.g. straight-through-estimator).</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8926-a-mean-field-theory-of-quantized-deep-networks-the-quantization-depth-trade-off">A Mean Field Theory of Quantized Deep Networks: The Quantization-Depth Trade-Off</a>: provides a guidance to balance the activation quantization (N) and the depth (L) of a model, $L\propto N^{1.87}$.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-23.pdf">[w]Progressive Stochastic Binarization of Deep Networks</a>: uses binary weights stochastically to present float weights in a statistically sounding approach.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-29.pdf">[w] Regularized Binary Network Training</a>: improves the training procedure for binary network.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-16.pdf">[w] Neural Networks Weights Quantization: Target None-retraining Ternary (TNT)</a>: uses cosine similarity to convert network weights into tenary values.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-17.pdf">[w] Instant Quantization of Neural Networks using Monte Carlo Methods</a>: proposes to quantize model weights by Monte Carlo sampling to reduce retraining.  The model size is controlled by the number of samples.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-11.pdf">[w] Discovering Low-Precision Networks Close to Full-Precision Networks for Efficient Inference</a>: provides a method to estimate the optimal quantization mapping and to efficiently finetune the quantized model.</p>
+</li>
+</ul>
+<h3 id="Architecture">Architecture<a class="anchor-link" href="#Architecture">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://papers.nips.cc/paper/8412-condconv-conditionally-parameterized-convolutions-for-efficient-inference">CondConv: Conditionally Parameterized Convolutions for Efficient Inference</a>: learns the dynamic (input-dependent) weights to combine different kernels for convolutions. It shows better accuracy/speed on mobilenet models.</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8498-more-is-less-learning-efficient-video-representations-by-big-little-network-and-depthwise-temporal-aggregation">More Is Less: Learning Efficient Video Representations by Big-Little Network and Depthwise Temporal Aggregation</a></p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8743-sparse-sparse-architecture-search-for-cnns-on-resource-constrained-microcontrollers">SpArSe: Sparse Architecture Search for CNNs on Resource-Constrained Microcontrollers</a>: demonstrates (first time?) to apply CNN architecture with dozen KB memory and model size.</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8838-constrained-deep-neural-network-architecture-search-for-iot-devices-accounting-for-hardware-calibration">Constrained deep neural network architecture search for IoT devices accounting for hardware calibration</a>: applies genetic evolution to mutate neural architecture (mainly number of neurons).  It also includes realistic measure of inference time for the resource constraint.</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8793-exploring-unexplored-tensor-network-decompositions-for-convolutional-neural-networks">Einconv: Exploring Unexplored Tensor Network Decompositions for Convolutional Neural Networks</a>: provides an interesting view to decompose the convolustion as tensor network and leverage it to search for efficient neural architecture.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-2.pdf">[w]AutoSlim: Towards One-Shot Architecture Search for Channel Numbers</a>: searches slim network (subnet) during greedy training process to find the best model.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-39.pdf">[w] Energy-Aware Neural Architecture Optimization With Splitting Steepest Descent</a>: proposes to split neurons along its steepest descent direction to grow neural network (NAS).  It provides a theoretical sounding procedure to assign new neurons after splitting.</p>
+</li>
+</ul>
+<h3 id="Hardware-related">Hardware-related<a class="anchor-link" href="#Hardware-related">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-12.pdf">[w] Exploring Bit-Slice Sparsity in Deep Neural Networks for Efficient ReRAM-Based Deployment</a>: proposes an l1 norm for ReRAM-based device for efficient computation.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-30.pdf">[w] Improving Efficiency in Neural Network Accelerator using Operands Hamming Distance Optimization</a>: reduces the energy consumption by regularizing the datapath with the proposed operands hamming distance optimization.</p>
+</li>
+</ul>
+<h3 id="Others">Others<a class="anchor-link" href="#Others">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://papers.nips.cc/paper/8618-deconstructing-lottery-tickets-zeros-signs-and-the-supermask">Deconstructing Lottery Tickets: Zeros, Signs, and the Supermask</a>: illustrates the importance of mask strategy and provide a better way to learn the mask (for training pruned model).</p>
+</li>
+<li>
+<p><a href="http://papers.nips.cc/paper/8410-model-compression-with-adversarial-robustness-a-unified-optimization-framework">Model Compression with Adversarial Robustness: A Unified Optimization Framework</a>: proposes adversarial attack-aware model compression.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-38.pdf">[w] On hardware-aware probabilistic frameworks for resource constrained embedded applications</a>: targets compression for probabilistic models.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-9.pdf">[w] Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference</a>: speeds up the search for top-k classes for softmax layer.</p>
+</li>
+<li>
+<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-10.pdf">[w] Algorithm-hardware Co-design for Deformable Convolution</a>: improves the deformable convolution by rounding, bounding and squared shape for efficient inference on FPGA devices.</p>
+</li>
+</ul>
+<h3 id="Application">Application<a class="anchor-link" href="#Application">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://papers.nips.cc/paper/8382-point-voxel-cnn-for-efficient-3d-deep-learning">Point-Voxel CNN for Efficient 3D Deep Learning</a>: solves the efficiency challenges of applying DL to  3D point cloud applications.</li>
+<li>
+<a href="http://papers.nips.cc/paper/8993-liteeval-a-coarse-to-fine-framework-for-resource-efficient-video-recognition">LiteEval: A Coarse-to-Fine Framework for Resource Efficient Video Recognition</a>: uses two LSTM networks (fine/coarse) for video recognition.  The coarse network is always-on, whereas the fine network is activated by the output of the hidden layers in the coarse network.  The gates control the activation is a trainable 1-layer dense layer with probabilistic nature.  Also, the hidden information is shared between the coarse and fine networks.</li>
+<li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-1.pdf">[w]YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection</a>: demonstrates a highly efficient YOLO implementation.</li>
+<li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-31.pdf">[w]Q8BERT: Quantized 8Bit BERT</a>: applies 8bit quantization to deep language models, such as BERT.</li>
+<li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-25.pdf">[w] Training Compact Models for Low Resource Entity Tagging using Pre-trained Language Models</a>: distills transformer model to train compact model.</li>
+<li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-36.pdf">[w] Fully Quantized Transformer for Improved Translation</a>: applies quantization to transformer network for language translation.</li>
+<li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-19.pdf">[w] Spoken Language Understanding on the Edge</a>: presents the system design of language understanding device for edge applications.</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/compression/" rel="tag">compression</a></li>
+            <li><a class="tag p-category" href="../../categories/neurips/" rel="tag">neurips</a></li>
+            <li><a class="tag p-category" href="../../categories/notes/" rel="tag">notes</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../index-colab/" rel="prev" title="Colab Index">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><div class="fb-comments" data-href="https://jiayiliu.github.com/posts/neurips2019/" data-width="470"></div>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><div id="fb-root"></div>
+<script>
+    // thank lxml for this
+    $('.fb-comments-count').each(function(i, obj) {
+        var url = obj.attributes['data-url'].value;
+        // change here if you dislike the default way of displaying
+        // this
+        obj.innerHTML = '<fb:comments-count href="' + url + '"></fb:comments-count> comments';
+    });
+
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128364527-2');
+</script>
+</body>
+</html>

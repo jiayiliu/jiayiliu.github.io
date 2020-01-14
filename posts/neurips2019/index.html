@@ -122,12 +122,8 @@ navbar-dark bg-dark
 <h3 id="Sessions">Sessions<a class="anchor-link" href="#Sessions">¶</a>
 </h3>
 <ul>
-<li>
-<p><a href="https://nips.cc/Conferences/2019/Schedule?showParentSession=15511">Deep Learning -- Efficient Inference Methods</a></p>
-</li>
-<li>
-<p><a href="https://www.emc2-workshop.com/neurips-19">Workshop on Energy Efficient Machine Learning and Cognitive Computing</a></p>
-</li>
+<li><a href="https://nips.cc/Conferences/2019/Schedule?showParentSession=15511">Deep Learning -- Efficient Inference Methods</a></li>
+<li><a href="https://www.emc2-workshop.com/neurips-19">Workshop on Energy Efficient Machine Learning and Cognitive Computing</a></li>
 </ul>
 <h3 id="Workshop-keynotes">Workshop keynotes<a class="anchor-link" href="#Workshop-keynotes">¶</a>
 </h3>
@@ -145,74 +141,57 @@ navbar-dark bg-dark
 </h3>
 <ul>
 <li>
-<p><a href="http://papers.nips.cc/paper/8464-channel-gating-neural-networks">Channel Gating Neural Networks</a>: proposes an effective way to create dynamically pruned network for inference by channel gating. It provides a clear instruction to design the network architecture and to train such network. The inference stage requires carefully implemented gating function to reduce the computation (therefore better efficiency).</p>
-</li>
+<a href="http://papers.nips.cc/paper/8867-global-sparse-momentum-sgd-for-pruning-very-deep-neural-networks">Global Sparse Momentum SGD for Pruning Very Deep Neural Networks</a>: proposes to combine momentum SGD with weight importance (determined by Taylor expansion) to update and prune model weights automatically.  The momentum is critical to accelerate the weight decay and pruning efficiency. </li>
 <li>
-<p><a href="http://papers.nips.cc/paper/9521-autoprune-automatic-network-pruning-by-regularizing-auxiliary-parameters">AutoPrune: Automatic Network Pruning by Regularizing Auxiliary Parameters</a>: trains an additional set of parameters to prune the underlying network weights (similar to gating).</p>
-</li>
+<a href="http://papers.nips.cc/paper/8464-channel-gating-neural-networks">Channel Gating Neural Networks</a>: proposes an effective way to create dynamically pruned network for inference by channel gating. It provides a clear instruction to design the network architecture and to train such network. The inference stage requires carefully implemented gating function to reduce the computation (therefore better efficiency).</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8486-gate-decorator-global-filter-pruning-method-for-accelerating-deep-convolutional-neural-networks">Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks</a>: provides a detailed solution for effective channel pruning.  Using a trainable weight factor to guide pruning has been studied in <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.pdf">Liu et al. 2017</a>.  Using Taylor expansion to predict the importance has been explored in <a href="https://arxiv.org/abs/1611.06440">Molchanov et al. 2016</a>.  This paper combined the techniques together along with tweaks on skip connection and batch normalization to form a concrete solution for filter/channel pruning.</p>
-</li>
+<a href="http://papers.nips.cc/paper/9521-autoprune-automatic-network-pruning-by-regularizing-auxiliary-parameters">AutoPrune: Automatic Network Pruning by Regularizing Auxiliary Parameters</a>: trains an additional set of parameters to prune the underlying network weights (similar to gating).</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8364-network-pruning-via-transformable-architecture-search">Network Pruning via Transformable Architecture Search</a>: searches for the best width and depth using NAS.  It is not a typical NAS, instead, it represents the network depth and width probabilistically and learn them gradually via validation set to form the final pruned model with distillation.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8486-gate-decorator-global-filter-pruning-method-for-accelerating-deep-convolutional-neural-networks">Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks</a>: provides a detailed solution for effective channel pruning.  Using a trainable weight factor to guide pruning has been studied in <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.pdf">Liu et al. 2017</a>.  Using Taylor expansion to predict the importance has been explored in <a href="https://arxiv.org/abs/1611.06440">Molchanov et al. 2016</a>.  This paper combined the techniques together along with tweaks on skip connection and batch normalization to form a concrete solution for filter/channel pruning.</li>
+<li>
+<a href="http://papers.nips.cc/paper/8364-network-pruning-via-transformable-architecture-search">Network Pruning via Transformable Architecture Search</a>: searches for the best width and depth using NAS.  It is not a typical NAS, instead, it represents the network depth and width probabilistically and learn them gradually via validation set to form the final pruned model with distillation.</li>
 </ul>
 <h3 id="Low-rank">Low rank<a class="anchor-link" href="#Low-rank">¶</a>
 </h3>
 <ul>
 <li>
-<p><a href="http://papers.nips.cc/paper/8860-singleshot-a-scalable-tucker-tensor-decomposition">Singleshot : a scalable Tucker tensor decomposition</a>: proposes efficient algorithms for Tucker decomposition.  The decomposition can improve model inference speed and reduce model size.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8860-singleshot-a-scalable-tucker-tensor-decomposition">Singleshot : a scalable Tucker tensor decomposition</a>: proposes efficient algorithms for Tucker decomposition.  The decomposition can improve model inference speed and reduce model size.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-15.pdf">[w]Trained Rank Pruning for Efficient Deep Neural Networks</a>: applies SGD on decomposed matrices periodically to obtain a low-rank network.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-15.pdf">[w]Trained Rank Pruning for Efficient Deep Neural Networks</a>: applies SGD on decomposed matrices periodically to obtain a low-rank network. </li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-13.pdf">[w] Pushing the limits of RNN Compression</a>: uses Kronecker products to decompose matrices in RNN layers and obtains 15x or more compression.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-13.pdf">[w] Pushing the limits of RNN Compression</a>: uses Kronecker products to decompose matrices in RNN layers and obtains 15x or more compression.</li>
 </ul>
 <h3 id="Quantization">Quantization<a class="anchor-link" href="#Quantization">¶</a>
 </h3>
 <ul>
 <li>
-<p><a href="http://papers.nips.cc/paper/8736-hybrid-8-bit-floating-point-hfp8-training-and-inference-for-deep-neural-networks">Hybrid 8-bit Floating Point (HFP8) Training and Inference for Deep Neural Networks</a>: proposes a new float 8 representation to effectively quantize DNN.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8736-hybrid-8-bit-floating-point-hfp8-training-and-inference-for-deep-neural-networks">Hybrid 8-bit Floating Point (HFP8) Training and Inference for Deep Neural Networks</a>: proposes a new float 8 representation to effectively quantize DNN.</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/9052-the-synthesis-of-xnor-recurrent-neural-networks-with-stochastic-logic">The Synthesis of XNOR Recurrent Neural Networks with Stochastic Logic</a>: fully adopts XNOR operations for the LSTM-based RNN model.</p>
-</li>
+<a href="http://papers.nips.cc/paper/9052-the-synthesis-of-xnor-recurrent-neural-networks-with-stochastic-logic">The Synthesis of XNOR Recurrent Neural Networks with Stochastic Logic</a>: fully adopts XNOR operations for the LSTM-based RNN model.</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8647-metaquant-learning-to-quantize-by-learning-to-penetrate-non-differentiable-quantization">MetaQuant: Learning to Quantize by Learning to Penetrate Non-differentiable Quantization</a>: learns the mapping for gradient update for quantized model instead of using a pre-defined schema (e.g. straight-through-estimator).</p>
-</li>
+<a href="http://papers.nips.cc/paper/8647-metaquant-learning-to-quantize-by-learning-to-penetrate-non-differentiable-quantization">MetaQuant: Learning to Quantize by Learning to Penetrate Non-differentiable Quantization</a>: learns the mapping for gradient update for quantized model instead of using a pre-defined schema (e.g. straight-through-estimator).</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8926-a-mean-field-theory-of-quantized-deep-networks-the-quantization-depth-trade-off">A Mean Field Theory of Quantized Deep Networks: The Quantization-Depth Trade-Off</a>: provides a guidance to balance the activation quantization (N) and the depth (L) of a model, $L\propto N^{1.87}$.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8926-a-mean-field-theory-of-quantized-deep-networks-the-quantization-depth-trade-off">A Mean Field Theory of Quantized Deep Networks: The Quantization-Depth Trade-Off</a>: provides a guidance to balance the activation quantization (N) and the depth (L) of a model, $L\propto N^{1.87}$.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-23.pdf">[w]Progressive Stochastic Binarization of Deep Networks</a>: uses binary weights stochastically to present float weights in a statistically sounding approach.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-23.pdf">[w]Progressive Stochastic Binarization of Deep Networks</a>: uses binary weights stochastically to present float weights in a statistically sounding approach.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-29.pdf">[w] Regularized Binary Network Training</a>: improves the training procedure for binary network.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-29.pdf">[w] Regularized Binary Network Training</a>: improves the training procedure for binary network.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-16.pdf">[w] Neural Networks Weights Quantization: Target None-retraining Ternary (TNT)</a>: uses cosine similarity to convert network weights into tenary values.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-16.pdf">[w] Neural Networks Weights Quantization: Target None-retraining Ternary (TNT)</a>: uses cosine similarity to convert network weights into tenary values.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-17.pdf">[w] Instant Quantization of Neural Networks using Monte Carlo Methods</a>: proposes to quantize model weights by Monte Carlo sampling to reduce retraining.  The model size is controlled by the number of samples.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-17.pdf">[w] Instant Quantization of Neural Networks using Monte Carlo Methods</a>: proposes to quantize model weights by Monte Carlo sampling to reduce retraining.  The model size is controlled by the number of samples.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-11.pdf">[w] Discovering Low-Precision Networks Close to Full-Precision Networks for Efficient Inference</a>: provides a method to estimate the optimal quantization mapping and to efficiently finetune the quantized model.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-11.pdf">[w] Discovering Low-Precision Networks Close to Full-Precision Networks for Efficient Inference</a>: provides a method to estimate the optimal quantization mapping and to efficiently finetune the quantized model.</li>
 </ul>
 <h3 id="Architecture">Architecture<a class="anchor-link" href="#Architecture">¶</a>
 </h3>
 <ul>
 <li>
-<p><a href="http://papers.nips.cc/paper/8412-condconv-conditionally-parameterized-convolutions-for-efficient-inference">CondConv: Conditionally Parameterized Convolutions for Efficient Inference</a>: learns the dynamic (input-dependent) weights to combine different kernels for convolutions. It shows better accuracy/speed on mobilenet models.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8412-condconv-conditionally-parameterized-convolutions-for-efficient-inference">CondConv: Conditionally Parameterized Convolutions for Efficient Inference</a>: learns the dynamic (input-dependent) weights to combine different kernels for convolutions. It shows better accuracy/speed on mobilenet models.</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8498-more-is-less-learning-efficient-video-representations-by-big-little-network-and-depthwise-temporal-aggregation">More Is Less: Learning Efficient Video Representations by Big-Little Network and Depthwise Temporal Aggregation</a></p>
-</li>
+<a href="http://papers.nips.cc/paper/8498-more-is-less-learning-efficient-video-representations-by-big-little-network-and-depthwise-temporal-aggregation">More Is Less: Learning Efficient Video Representations by Big-Little Network and Depthwise Temporal Aggregation</a>: adds a 'collaborate' light-weight layer along with the normal layer to predict the zeros in the activation map and to save the computes needed by the normal layer.</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8743-sparse-sparse-architecture-search-for-cnns-on-resource-constrained-microcontrollers">SpArSe: Sparse Architecture Search for CNNs on Resource-Constrained Microcontrollers</a>: demonstrates (first time?) to apply CNN architecture with dozen KB memory and model size.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8743-sparse-sparse-architecture-search-for-cnns-on-resource-constrained-microcontrollers">SpArSe: Sparse Architecture Search for CNNs on Resource-Constrained Microcontrollers</a>: demonstrates (first time?) to apply CNN architecture with dozen KB memory and model size.</li>
 <li>
 <p><a href="http://papers.nips.cc/paper/8838-constrained-deep-neural-network-architecture-search-for-iot-devices-accounting-for-hardware-calibration">Constrained deep neural network architecture search for IoT devices accounting for hardware calibration</a>: applies genetic evolution to mutate neural architecture (mainly number of neurons).  It also includes realistic measure of inference time for the resource constraint.</p>
 </li>
@@ -220,40 +199,31 @@ navbar-dark bg-dark
 <p><a href="http://papers.nips.cc/paper/8793-exploring-unexplored-tensor-network-decompositions-for-convolutional-neural-networks">Einconv: Exploring Unexplored Tensor Network Decompositions for Convolutional Neural Networks</a>: provides an interesting view to decompose the convolustion as tensor network and leverage it to search for efficient neural architecture.</p>
 </li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-2.pdf">[w]AutoSlim: Towards One-Shot Architecture Search for Channel Numbers</a>: searches slim network (subnet) during greedy training process to find the best model.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-2.pdf">[w] AutoSlim: Towards One-Shot Architecture Search for Channel Numbers</a>: searches slim network (subnet) during greedy training process to find the best model.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-39.pdf">[w] Energy-Aware Neural Architecture Optimization With Splitting Steepest Descent</a>: proposes to split neurons along its steepest descent direction to grow neural network (NAS).  It provides a theoretical sounding procedure to assign new neurons after splitting.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-39.pdf">[w] Energy-Aware Neural Architecture Optimization With Splitting Steepest Descent</a>: proposes to split neurons along its steepest descent direction to grow neural network (NAS).  It provides a theoretical sounding procedure to assign new neurons after splitting.</li>
 </ul>
 <h3 id="Hardware-related">Hardware-related<a class="anchor-link" href="#Hardware-related">¶</a>
 </h3>
 <ul>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-12.pdf">[w] Exploring Bit-Slice Sparsity in Deep Neural Networks for Efficient ReRAM-Based Deployment</a>: proposes an l1 norm for ReRAM-based device for efficient computation.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-12.pdf">[w] Exploring Bit-Slice Sparsity in Deep Neural Networks for Efficient ReRAM-Based Deployment</a>: proposes an l1 norm for ReRAM-based device for efficient computation.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-30.pdf">[w] Improving Efficiency in Neural Network Accelerator using Operands Hamming Distance Optimization</a>: reduces the energy consumption by regularizing the datapath with the proposed operands hamming distance optimization.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-30.pdf">[w] Improving Efficiency in Neural Network Accelerator using Operands Hamming Distance Optimization</a>: reduces the energy consumption by regularizing the datapath with the proposed operands hamming distance optimization.</li>
 </ul>
 <h3 id="Others">Others<a class="anchor-link" href="#Others">¶</a>
 </h3>
 <ul>
 <li>
-<p><a href="http://papers.nips.cc/paper/8618-deconstructing-lottery-tickets-zeros-signs-and-the-supermask">Deconstructing Lottery Tickets: Zeros, Signs, and the Supermask</a>: illustrates the importance of mask strategy and provide a better way to learn the mask (for training pruned model).</p>
-</li>
+<a href="http://papers.nips.cc/paper/8618-deconstructing-lottery-tickets-zeros-signs-and-the-supermask">Deconstructing Lottery Tickets: Zeros, Signs, and the Supermask</a>: illustrates the importance of mask strategy and provide a better way to learn the mask (for training pruned model).</li>
 <li>
-<p><a href="http://papers.nips.cc/paper/8410-model-compression-with-adversarial-robustness-a-unified-optimization-framework">Model Compression with Adversarial Robustness: A Unified Optimization Framework</a>: proposes adversarial attack-aware model compression.</p>
-</li>
+<a href="http://papers.nips.cc/paper/8410-model-compression-with-adversarial-robustness-a-unified-optimization-framework">Model Compression with Adversarial Robustness: A Unified Optimization Framework</a>: proposes adversarial attack-aware model compression.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-38.pdf">[w] On hardware-aware probabilistic frameworks for resource constrained embedded applications</a>: targets compression for probabilistic models.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-38.pdf">[w] On hardware-aware probabilistic frameworks for resource constrained embedded applications</a>: targets compression for probabilistic models.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-9.pdf">[w] Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference</a>: speeds up the search for top-k classes for softmax layer.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-9.pdf">[w] Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference</a>: speeds up the search for top-k classes for softmax layer.</li>
 <li>
-<p><a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-10.pdf">[w] Algorithm-hardware Co-design for Deformable Convolution</a>: improves the deformable convolution by rounding, bounding and squared shape for efficient inference on FPGA devices.</p>
-</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-10.pdf">[w] Algorithm-hardware Co-design for Deformable Convolution</a>: improves the deformable convolution by rounding, bounding and squared shape for efficient inference on FPGA devices.</li>
 </ul>
 <h3 id="Application">Application<a class="anchor-link" href="#Application">¶</a>
 </h3>
@@ -263,9 +233,9 @@ navbar-dark bg-dark
 <li>
 <a href="http://papers.nips.cc/paper/8993-liteeval-a-coarse-to-fine-framework-for-resource-efficient-video-recognition">LiteEval: A Coarse-to-Fine Framework for Resource Efficient Video Recognition</a>: uses two LSTM networks (fine/coarse) for video recognition.  The coarse network is always-on, whereas the fine network is activated by the output of the hidden layers in the coarse network.  The gates control the activation is a trainable 1-layer dense layer with probabilistic nature.  Also, the hidden information is shared between the coarse and fine networks.</li>
 <li>
-<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-1.pdf">[w]YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection</a>: demonstrates a highly efficient YOLO implementation.</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-1.pdf">[w] YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection</a>: demonstrates a highly efficient YOLO implementation.</li>
 <li>
-<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-31.pdf">[w]Q8BERT: Quantized 8Bit BERT</a>: applies 8bit quantization to deep language models, such as BERT.</li>
+<a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-31.pdf">[w] Q8BERT: Quantized 8Bit BERT</a>: applies 8bit quantization to deep language models, such as BERT.</li>
 <li>
 <a href="https://www.emc2-workshop.com/assets/docs/neurips-19/emc2-neurips19-paper-25.pdf">[w] Training Compact Models for Low Resource Entity Tagging using Pre-trained Language Models</a>: distills transformer model to train compact model.</li>
 <li>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+fb: http://ogp.me/ns/fb# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Conference review for model compression presented in CVPR 2019">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review of CVPR 2019 for Model Compression | Lab of Random</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://jiayiliu.github.com/posts/CVPR2019/">
+<meta property="fb:app_id" content="321809675046639">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
+<link rel="prev" href="../neurips2019/" title="Review of NeurIPS 2019 for Model Compression" type="text/html">
+<meta property="og:site_name" content="Lab of Random">
+<meta property="og:title" content="Review of CVPR 2019 for Model Compression">
+<meta property="og:url" content="https://jiayiliu.github.com/posts/CVPR2019/">
+<meta property="og:description" content="Conference review for model compression presented in CVPR 2019">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-01-19T11:00:00-08:00">
+<meta property="article:tag" content="compression">
+<meta property="article:tag" content="CVPR">
+<meta property="article:tag" content="notes">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="https://jiayiliu.github.com/">
+
+            <span id="blog-title">Lab of Random</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
+                </li>
+<li class="nav-item">
+<a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/index.ipynb" class="nav-link">Google Colab</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.ipynb" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Review of CVPR 2019 for Model Compression</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Jiayi (Jason) Liu
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-19T11:00:00-08:00" itemprop="datePublished" title="2020-01-19 11:00">2020-01-19 11:00</time></a>
+            </p>
+                <p class="commentline">
+        
+<span class="fb-comments-count" data-url="/posts/CVPR2019/">
+
+
+            
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">Source</a></p>
+
+        </span></p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="CVPR-2019-Compression-Review">CVPR 2019 Compression Review<a class="anchor-link" href="#CVPR-2019-Compression-Review">¶</a>
+</h2>
+<h3 id="Workshop">Workshop<a class="anchor-link" href="#Workshop">¶</a>
+</h3>
+<ul>
+<li><a href="https://sites.google.com/view/ecv2019/home">Efficient Deep Learning for Computer Vision</a></li>
+<li><a href="http://www.emc2-ai.org/cvpr-19">EMC^2 - Energy Efficient Machine Learning and Cognitive Computing</a></li>
+<li><a href="https://embeddedvisionworkshop.wordpress.com/">Embedded Computer Vision Workshop</a></li>
+<li><a href="http://www.ee.oulu.fi/~lili/CEFRLatCVPR2019.html">Compact and Efficient Feature Representation and Learning in Computer Vision</a></li>
+</ul>
+<h3 id="Pruning">Pruning<a class="anchor-link" href="#Pruning">¶</a>
+</h3>
+<!-- TEASER_END -->
+
+<ul>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Li_Exploiting_Kernel_Sparsity_and_Entropy_for_Interpretable_CNN_Compression_CVPR_2019_paper.html">Exploiting Kernel Sparsity and Entropy for Interpretable CNN Compression</a>: proposes a new pruning criteria - Kernel Sparsity and Entropy (KSE), which combines the similarity between kernels and information carries from the feature maps.  Instead of pruning, they use K-mean clustering to fuse kernels to maintain accuracy.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Compressing_Convolutional_Neural_Networks_via_Factorized_Convolutional_Filters_CVPR_2019_paper">Compressing Convolutional Neural Networks via Factorized Convolutional Filters</a>: adds additional binary variables to each filter to prune filters in a two-step training procedure.  Normal backpropagation for weights update, and ADMM-based update for such binary variables.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/He_Filter_Pruning_via_Geometric_Median_for_Deep_Convolutional_Neural_Networks_CVPR_2019_paper">Filter Pruning via Geometric Median for Deep Convolutional Neural Networks Acceleration</a>: points out that pruning by weight (weight norm) is not necessarily effective, and a better solution is to prune by weight similarity.  Based on that, the proposed method prune filters close to the geometric median of filters.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Yang_ECC_Platform-Independent_Energy-Constrained_Deep_Neural_Network_Compression_via_a_Bilinear_CVPR_2019_paper.html">ECC: Platform-Independent Energy-Constrained Deep Neural Network Compression via a Bilinear Regression Model</a>: provides an energy-aware model pruning that relies on modeling energy by regression (on sparsity) and updates weights and sparsity via back-propagation.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Towards_Optimal_Structured_CNN_Pruning_via_Generative_Adversarial_Learning_CVPR_2019_paper.html">Towards Optimal Structured CNN Pruning via Generative Adversarial Learning</a>: combines three major methodologies to prune CNN efficiently.  First, cast the pruning problem into three levels - block (skip connection), branch (NAS-like), channel.  Second, use distillation to transfer the teacher's knowledge. Third, use adversarial learning to further improve accuracy.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Zhao_Variational_Convolutional_Neural_Network_Pruning_CVPR_2019_paper.html">Variational Convolutional Neural Network Pruning</a>: uses the scaling term in the batch normalization as the saliency indicator and models it via Bayesian probability for pruning.</li>
+</ul>
+<h3 id="Quantization">Quantization<a class="anchor-link" href="#Quantization">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/He_Simultaneously_Optimizing_Weight_and_Quantizer_of_Ternary_Neural_Network_Using_CVPR_2019_paper">Simultaneously Optimizing Weight and Quantizer of Ternary Neural Network using Truncated Gaussian Approximation</a>: uses Gaussian approximation to quantize model weights into the ternary format. With a gradient correction on the STE method, their approach further improves the model training with quantized weights.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Ding_Regularizing_Activation_Distribution_for_Training_Binarized_Deep_Networks_CVPR_2019_paper.html">Regularizing Activation Distribution for Training Binarized Deep Networks</a>: adds three regularizing terms (degeneration, saturation, gradient mismatch) on the activation loss to correct the gradient update for the binary neural network.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Wang_HAQ_Hardware-Aware_Automated_Quantization_With_Mixed_Precision_CVPR_2019_paper.html">HAQ: Hardware-Aware Automated Quantization With Mixed Precision</a>: treats the quantization bits as neural architecture hyperparameters, it applies NAS to search the best quantization strategy with RL.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Jung_Learning_to_Quantize_Deep_Networks_by_Optimizing_Quantization_Intervals_With_CVPR_2019_paper">Learning to Quantize Deep Networks by Optimizing Quantization Intervals with Task Loss</a>: parameterizes the quantization interval and learns the quantization via training.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Molchanov_Importance_Estimation_for_Neural_Network_Pruning_CVPR_2019_paper.html">Importance Estimation for Neural Network Pruning</a>: proposes a new importance measure based on the first-order Taylor expansion and it works for filters by grouping weights together.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Yang_Quantization_Networks_CVPR_2019_paper.html">Quantization Networks</a>: multiple sigmoid functions to approximate the quantization mapping and the thresholds are learned with the training procedure.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Ding_Centripetal_SGD_for_Pruning_Very_Deep_Convolutional_Networks_With_Complicated_CVPR_2019_paper">Centripetal SGD for Pruning Very Deep Convolutional Networks with Complicated Structure</a>: clusters filters into groups and adds an intra-cluster similarity as a penalty for model training (centripetal).</li>
+</ul>
+<h3 id="Low-Rank-Decomposition">Low-Rank Decomposition<a class="anchor-link" href="#Low-Rank-Decomposition">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Kim_Efficient_Neural_Network_Compression_CVPR_2019_paper.html">Efficient Neural Network Compression</a>: automate the search for the best ranks for matrix decomposition using SVD for each layer.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhao_Building_Efficient_Deep_Neural_Networks_With_Unitary_Group_Convolutions_CVPR_2019_paper">Building Efficient Deep Neural Networks with Unitary Group Convolutions</a>: reveals the relation between shufflenet (group convolution) and circulant convolution.  Using Hadamard transform, they propose an efficient UGconv block to replace the group conv block.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Minnehan_Cascaded_Projection_End-To-End_Network_Compression_and_Acceleration_CVPR_2019_paper.html">Cascaded Projection: End-to-End Network Compression and Acceleration</a>: proposes to reduce the reconstruction error on the feature maps rather than its linear outputs before the activations. Direct training by general SGD with both classification loss and reconstruction loss is not stable, therefore, they improve it by training odd and even layers iteratively.</li>
+</ul>
+<h3 id="Architecture">Architecture<a class="anchor-link" href="#Architecture">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Cao_SeerNet_Predicting_Convolutional_Neural_Network_Feature-Map_Sparsity_Through_Low-Bit_Quantization_CVPR_2019_paper.html">SeerNet: Predicting Convolutional Neural Network Feature-Map Sparsity Through Low-Bit Quantization</a>: uses a quantized version to quickly predict the sparsity of the activation map and therefore reduces the computation required for the original dense layer.  Similar to another work <a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Dong_More_Is_Less_CVPR_2017_paper.pdf">More is less: A More Complicated Network with Less Inference Complexity</a>.  It requires a reimplementation of the network to achieve the speed-up.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Tan_MnasNet_Platform-Aware_Neural_Architecture_Search_for_Mobile_CVPR_2019_paper">MnasNet: Platform-Aware Neural Architecture Search for Mobile</a>: applies NAS for mobile applications, i.e. faster inference with light weight models.  It contains a few novelties in the searching procedure: 1) search differently for blocks, 2) early stopping for network candidates, 3) configurable reward combining accuracy and latency for RL agent.  The output model architecture is efficient for mobile phones (single-core CPU).</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Mehta_ESPNetv2_A_Light-Weight_Power_Efficient_and_General_Purpose_Convolutional_Neural_CVPR_2019_paper">ESPNetv2: A Light-weight, Power Efficient, and General Purpose Convolutional Neural Network</a>: proposes a new efficient CNN architecture using group convolution and dilated convolution.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Wu_FBNet_Hardware-Aware_Efficient_ConvNet_Design_via_Differentiable_Neural_Architecture_Search_CVPR_2019_paper.html">FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search</a>: uses measured latency for loss to search for the optimal network architecture.  The NAS is treated as to search subnet from a supernet with stochastic sampling with probabilities.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Dai_ChamNet_Towards_Efficient_Network_Design_Through_Platform-Aware_Model_Adaptation_CVPR_2019_paper.html">ChamNet: Towards Efficient Network Design Through Platform-Aware Model Adaptation</a>: applies NAS with energy consumption and latency.  To speed up the search, they use Gaussian Process to model energy consumption and accuracy.  The latency is modeled as a sum of operations in a measured look-up table.  The search space is limited to a few parameters associated with the backbone architecture.</li>
+</ul>
+<h3 id="Application">Application<a class="anchor-link" href="#Application">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Li_DFANet_Deep_Feature_Aggregation_for_Real-Time_Semantic_Segmentation_CVPR_2019_paper.html">DFANet: Deep Feature Aggregation for Real-Time Semantic Segmentation</a>: provides efficient architecture targets to deliver real-time semantic segmentation.  It relies on aggregate features to avoid computation overhead.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Morgado_NetTailor_Tuning_the_Architecture_Not_Just_the_Weights_CVPR_2019_paper">NETTAILOR: Tuning the architecture, not just the weights</a>: presents an effective method to distill and build student networks based on using low-fidelity layers to replace current layers.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Bhardwaj_Efficient_Video_Classification_Using_Fewer_Frames_CVPR_2019_paper">Efficient Video Classification Using Fewer Frames</a>: designs a distillation strategy to teach a student network uses fewer frames to reproduce the prediction from a teacher network.</li>
+<li><a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Wu_AdaFrame_Adaptive_Frame_Selection_for_Fast_Video_Recognition_CVPR_2019_paper.html">AdaFrame: Adaptive Frame Selection for Fast Video Recognition</a></li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Fully_Quantized_Network_for_Object_Detection_CVPR_2019_paper">Fully Quantized Network for Object Detection</a>: provides a detailed guide to fully quantize mobilenet for object detection.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Fast_Human_Pose_Estimation_CVPR_2019_paper">Fast Human Pose Estimation</a>: applies distillation to train light-weight student network (hourglass) for the human pose estimation task.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Kim_Deep_Virtual_Networks_for_Memory_Efficient_Inference_of_Multiple_Tasks_CVPR_2019_paper.html">Deep Virtual Networks for Memory Efficient Inference of Multiple Tasks</a>: presents a weight-sharing schema to design multi-task DNN with shared layers. The schema assumes that neighbor tasks are similar and therefore layers from other tasks can be shared in layer sequence.</li>
+<li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/He_Knowledge_Adaptation_for_Efficient_Semantic_Segmentation_CVPR_2019_paper">Knowledge Adaptation for Efficient Semantic Segmentation</a>: presents an effective solution to distill knowledge to train efficient student network for the semantic segmentation task.</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/compression/" rel="tag">compression</a></li>
+            <li><a class="tag p-category" href="../../categories/cvpr/" rel="tag">CVPR</a></li>
+            <li><a class="tag p-category" href="../../categories/notes/" rel="tag">notes</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../neurips2019/" rel="prev" title="Review of NeurIPS 2019 for Model Compression">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><div class="fb-comments" data-href="https://jiayiliu.github.com/posts/CVPR2019/" data-width="470"></div>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><div id="fb-root"></div>
+<script>
+    // thank lxml for this
+    $('.fb-comments-count').each(function(i, obj) {
+        var url = obj.attributes['data-url'].value;
+        // change here if you dislike the default way of displaying
+        // this
+        obj.innerHTML = '<fb:comments-count href="' + url + '"></fb:comments-count> comments';
+    });
+
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128364527-2');
+</script>
+</body>
+</html>

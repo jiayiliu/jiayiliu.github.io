@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://jiayiliu.github.com/archive.html</loc>
-  <lastmod>2020-01-08T04:10:00Z</lastmod>
+  <lastmod>2020-01-19T21:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/</loc>
-  <lastmod>2020-01-08T04:10:00Z</lastmod>
+  <lastmod>2020-01-19T21:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/benchmark/</loc>
@@ -60,6 +60,10 @@
  <url>
   <loc>https://jiayiliu.github.com/categories/compression/</loc>
   <lastmod>2019-12-10T07:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/categories/cvpr/</loc>
+  <lastmod>2020-01-19T21:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/imagenet/</loc>
@@ -107,7 +111,11 @@
  </url>
  <url>
   <loc>https://jiayiliu.github.com/index-1.html</loc>
-  <lastmod>2020-01-08T04:10:00Z</lastmod>
+  <lastmod>2020-01-19T21:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/posts/CVPR2019/</loc>
+  <lastmod>2020-01-19T21:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/imagenet-benchmark/</loc>

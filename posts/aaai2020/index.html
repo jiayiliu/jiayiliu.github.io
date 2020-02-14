@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+fb: http://ogp.me/ns/fb# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Conference review for model compression presented in AAAI 2020">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(Incomplete) Review of AAAI 2020 for Model Compression | Lab of Random</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://jiayiliu.github.com/posts/aaai2020/">
+<meta property="fb:app_id" content="321809675046639">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
+<link rel="prev" href="../CVPR2019/" title="Review of CVPR 2019 for Model Compression" type="text/html">
+<meta property="og:site_name" content="Lab of Random">
+<meta property="og:title" content="(Incomplete) Review of AAAI 2020 for Model Compression">
+<meta property="og:url" content="https://jiayiliu.github.com/posts/aaai2020/">
+<meta property="og:description" content="Conference review for model compression presented in AAAI 2020">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-02-13T21:00:00-08:00">
+<meta property="article:tag" content="AAAI">
+<meta property="article:tag" content="compression">
+<meta property="article:tag" content="notes">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="https://jiayiliu.github.com/">
+
+            <span id="blog-title">Lab of Random</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
+                </li>
+<li class="nav-item">
+<a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/index.ipynb" class="nav-link">Google Colab</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.ipynb" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">(Incomplete) Review of AAAI 2020 for Model Compression</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Jiayi (Jason) Liu
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-13T21:00:00-08:00" itemprop="datePublished" title="2020-02-13 21:00">2020-02-13 21:00</time></a>
+            </p>
+                <p class="commentline">
+        
+<span class="fb-comments-count" data-url="/posts/aaai2020/">
+
+
+            
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">Source</a></p>
+
+        </span></p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(Incomplete)-Review-of-AAAI-Model-Compression">(Incomplete) Review of AAAI Model Compression<a class="anchor-link" href="#(Incomplete)-Review-of-AAAI-Model-Compression">¶</a>
+</h2>
+<h3 id="Pruning">Pruning<a class="anchor-link" href="#Pruning">¶</a>
+</h3>
+<p><!-- TEASER_END --></p>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/1907.03141">Liu 2020 AutoCompress</a>: Targeted to solving the challenges in tuning the compression ratios for a CNN model,
+authors provided an integrated solution including structural (filter/channel/filter shape) pruning, L0 pruning, ADMM optimization, and evolutionary search for hyperparameter tuning.  Results are shown on VGG/ResNet with CIFAR10/ImageNet(top-5).</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1911.08020">Ren 2020 DARB</a>: Targeted to prune RNN models or fully connected layers in a structured approach, by leveraging on the insights from "the diverse redundancy of different rows, the sensitivity of different rows to pruning, and the position characteristics of retained weights".</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1909.12579">Wang 2020 Pruning</a>: Tested the idea to prune from scratch using network slimming technique (scalar gate). They showed promising results on VGG/ResNet(CIFAR10) and ResNet/MobileNet(ImageNet).</p>
+</li>
+</ul>
+<h3 id="Quantization">Quantization<a class="anchor-link" href="#Quantization">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://arxiv.org/abs/1909.05840">Shen 2020 Q-BERT</a>: Quantized BERT model with mixed-precision driven by the spectrum of Hessian matrices for each layers.  The Hessian is calculated by matrix-free power of iteration method, avoiding the challenge of computing 2nd-order derivate.  Furthermore, it adopted structured quantization for finer control within layers.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1912.02057">Li 2020 RTN</a>: Presented a reparameterization schema for ternary quantization, which improves the squashing range and training efficiency.  Furthermore, they demonstrated the energy and size reduction for inference on FPGA.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1901.01928">Gennari 2020 DSConv</a>: Proposed a new quantization structure for Convolution layers consisted of Variable Quantized Kernel (VQK) and Kernel Distribution Shift (KDS) to replace a block of convolution layer.  Quantizing both weights and activations, the method only lost 1\% accuracy with 4-bit quantization, and restored accuracy by using distillation without labeled data.</p>
+</li>
+</ul>
+<h3 id="Low-Rank">Low-Rank<a class="anchor-link" href="#Low-Rank">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="https://cs.nju.edu.cn/rl/people/liwb/AAAI20b.pdf">Liu 2020 Layerwise</a>: Reduced the extra space of sparse weight matrix by using layerwise sparse coding (LSC) and Signed Relative Index (SRI). The proposed method also provides faster inference speed comparing to vanilla sparse encoding or bitmasking.  The method is only verified on highly sparsed ADMM-LeNet.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/2001.02504">Zhang 2020 High</a> Evaluated the performance of depth-wise and point-wise convolutions on ARM devices and proposed a new algorithm to overcome the problems of "lots of cache misses under multi-core and poor data reuse at register level" and lead to 2~5x speed up comparing to TVM.</p>
+</li>
+</ul>
+<h3 id="Distillation">Distillation<a class="anchor-link" href="#Distillation">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://arxiv.org/abs/1911.09450">Bai 2020 Few</a>: Proposed a novel soft cross distillation to improve model compression in the few-shot setting.</li>
+</ul>
+<h3 id="NAS">NAS<a class="anchor-link" href="#NAS">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http://arxiv.org/abs/1911.09251">Zhang 2020 AutoShrink</a>: Efficiently explore and exploit during search for node and edge as network architecture iteratively.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1911.13019">Hang 2020 Towards</a>: Combined Oracle Knowledge Distillation with Neural Architecture Search to find the best student model under resource constraint.  Also, the teacher model is an ensemble of student nets.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1911.10862">Chen 2020 Binarized</a>: Extended the PC-DARTS to search binarized CNN. They improved the search speed and optimization by channel sampling and operation space reduction.</p>
+</li>
+</ul>
+<h3 id="Other">Other<a class="anchor-link" href="#Other">¶</a>
+</h3>
+<ul>
+<li>
+<p><a href="http:/%20/arxiv.org/abs/1907.06870">Xu 2020 Light</a>: Proposed a new activation function that improves compact model to learn better from teacher models.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1905.10073">Fuhl 2020 Training</a>: Replaced convolution layer with decision tree model for better inference speed. They also provided a formulation to train decision trees along with back-propagation.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1901.04687">Lee 2020 URNet</a>: Designed a new conditional block with a controllable scaling factor to tune model complexity dynamically.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1904.10921">Kim 2020 Plug-in</a>: Proposed a trainable gating function that can be integrated into existing neural networks for pruning.</p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1908.09699">Yang 2020 Gated</a>: Proposed a new light-weight architecture to improve the efficiency of DenseNet by using Hybrid Connectivity and Gated mechanism.</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2002.00552">Huang 2020 DWM</a>: Proposed a new decomposite to generalize Winograd convolution beyond 3x3 and stride of 1 with 2x better performance and small precision loss.</p>
+</li>
+</ul>
+<h3 id="Application">Application<a class="anchor-link" href="#Application">¶</a>
+</h3>
+<ul>
+<li>
+<a href="http://arxiv.org/abs/1911.09435">Liu 2020 TEINet</a>: Proposed a new network design for video recognition.</li>
+<li>
+<a href="http://arxiv.org/abs/2001.05314">Liao 2020 Embedding</a>: Compressed word embedding using iterative quantization.</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/aaai/" rel="tag">AAAI</a></li>
+            <li><a class="tag p-category" href="../../categories/compression/" rel="tag">compression</a></li>
+            <li><a class="tag p-category" href="../../categories/notes/" rel="tag">notes</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../CVPR2019/" rel="prev" title="Review of CVPR 2019 for Model Compression">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><div class="fb-comments" data-href="https://jiayiliu.github.com/posts/aaai2020/" data-width="470"></div>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><div id="fb-root"></div>
+<script>
+    // thank lxml for this
+    $('.fb-comments-count').each(function(i, obj) {
+        var url = obj.attributes['data-url'].value;
+        // change here if you dislike the default way of displaying
+        // this
+        obj.innerHTML = '<fb:comments-count href="' + url + '"></fb:comments-count> comments';
+    });
+
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '321809675046639',
+      status     : true,
+      xfbml      : true
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128364527-2');
+</script>
+</body>
+</html>

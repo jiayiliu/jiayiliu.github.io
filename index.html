@@ -11,23 +11,11 @@ fb: http://ogp.me/ns/fb# " lang="en">
 <link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://jiayiliu.github.com/">
 <meta property="fb:app_id" content="321809675046639">
 <link rel="next" href="index-1.html" type="text/html">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/aaai2020/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/PythonDev/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -38,7 +26,7 @@ MathJax.Hub.Config({
 navbar-dark bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://jiayiliu.github.com/">
+        <a class="navbar-brand" href=".">
 
             <span id="blog-title">Lab of Random</span>
         </a>
@@ -73,13 +61,54 @@ navbar-dark bg-dark
         <!--Body content-->
         
         
+        
 
     
 
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/aaai2020/" class="u-url">(Incomplete) Review of AAAI 2020 for Model Compression</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/PythonDev/" class="u-url">How to write reusable (but not usable) code</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jiayi (Jason) Liu
+            </span></p>
+            <p class="dateline">
+            <a href="posts/PythonDev/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-08-08T15:20:01-08:00" itemprop="datePublished" title="2020-08-08 15:20">2020-08-08 15:20</time></a>
+            </p>
+                <p class="commentline">
+        
+<span class="fb-comments-count" data-url="/posts/PythonDev/">
+
+
+        </span></p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-write-reusable-(but-not-usable)-code">How to write reusable (but not usable) code<a class="anchor-link" href="posts/PythonDev/#How-to-write-reusable-(but-not-usable)-code">¶</a>
+</h2>
+<p>Python is an easy and powerful language for machine learning practitioner like me.  A good style makes the code easy to read and reuse.  A lengthy one comes from <a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md">Google</a>.  Here, I want to share with you some tips to create troubles when others want to use your code.</p>
+<p><strong>Actually, I want you to avoid them.</strong></p>
+<p>To keep things tight, a short list followed by detailed examples in below.</p>
+<ul>
+<li>Write out-dated (and misleading) comment</li>
+<li>Mix controllable parameter and hard-coded parameters</li>
+<li>Save parameters in configuration file and never share it</li>
+<li>Access variables, functions, classes via string in the name of dynamic</li>
+<li>Give the same name to similar (but different) functions</li>
+<li>Mis-spell function name<p class="more"><a href="posts/PythonDev/">Read more…</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/aaai2020/" class="u-url">(Incomplete) Review of AAAI 2020 for Model Compression</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jiayi (Jason) Liu
@@ -225,6 +254,7 @@ navbar-dark bg-dark
 <h3 id="Other-random-topic">Other random topic<a class="anchor-link" href="posts/index-colab/#Other-random-topic">¶</a>
 </h3>
 <ul>
+<li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/code_style.ipynb">Code style recommendation</a></li>
 <li><a href="https://colab.research.google.com/github/jiayiliu/jiayiliu.github.io/blob/src/posts/Refinance%20Analysis.ipynb">Refinance Analysis</a></li>
 </ul>
 </div>
@@ -394,36 +424,6 @@ navbar-dark bg-dark
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/tensoflow-problem/" class="u-url">Warnings for TensorFlow User</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jiayi (Jason) Liu
-            </span></p>
-            <p class="dateline">
-            <a href="posts/tensoflow-problem/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-06-09T21:41:01-08:00" itemprop="datePublished" title="2019-06-09 21:41">2019-06-09 21:41</time></a>
-            </p>
-                <p class="commentline">
-        
-<span class="fb-comments-count" data-url="/posts/tensoflow-problem/">
-
-
-        </span></p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Warnings-for-TensorFlow-User">Warnings for TensorFlow User<a class="anchor-link" href="posts/tensoflow-problem/#Warnings-for-TensorFlow-User">¶</a>
-</h2>
-<p>This is (to be) a collection of warnings for TF users.</p>
-<p class="more"><a href="posts/tensoflow-problem/">Read more…</a></p>
-</div>
-</div>
-</div>
-    </div>
     </article>
 </div>
 
@@ -458,7 +458,7 @@ navbar-dark bg-dark
      js.src = "https://connect.facebook.net/en_US/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -472,6 +472,7 @@ MathJax.Hub.Config({
 });
 </script><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
             
         </footer>
 </div>

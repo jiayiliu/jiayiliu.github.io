@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lab of Random (Posts about python)</title><link>https://jiayiliu.github.com/</link><description></description><atom:link href="https://jiayiliu.github.com/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:jiayi.uiuc@gmail.com"&gt;Jiayi (Jason) Liu&lt;/a&gt; </copyright><lastBuildDate>Sun, 09 Aug 2020 22:27:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to write reusable (but not usable) code</title><link>https://jiayiliu.github.com/posts/PythonDev/</link><dc:creator>Jiayi (Jason) Liu</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="How-to-write-reusable-(but-not-usable)-code"&gt;How to write reusable (but not usable) code&lt;a class="anchor-link" href="https://jiayiliu.github.com/posts/PythonDev/#How-to-write-reusable-(but-not-usable)-code"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Python is an easy and powerful language for machine learning practitioner like me.  A good style makes the code easy to read and reuse.  A lengthy one comes from &lt;a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md"&gt;Google&lt;/a&gt;.  Here, I want to share with you some tips to create troubles when others want to use your code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Actually, I want you to avoid them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To keep things tight, a short list followed by detailed examples in below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write out-dated (and misleading) comment&lt;/li&gt;
+&lt;li&gt;Mix controllable parameter and hard-coded parameters&lt;/li&gt;
+&lt;li&gt;Save parameters in configuration file and never share it&lt;/li&gt;
+&lt;li&gt;Access variables, functions, classes via string in the name of dynamic&lt;/li&gt;
+&lt;li&gt;Give the same name to similar (but different) functions&lt;/li&gt;
+&lt;li&gt;Mis-spell function name&lt;p&gt;&lt;a href="https://jiayiliu.github.com/posts/PythonDev/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://jiayiliu.github.com/posts/PythonDev/</guid><pubDate>Sat, 08 Aug 2020 23:20:01 GMT</pubDate></item></channel></rss>

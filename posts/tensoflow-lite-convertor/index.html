@@ -11,22 +11,10 @@ fb: http://ogp.me/ns/fb# " lang="en">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://jiayiliu.github.com/posts/tensoflow-lite-convertor/">
 <meta property="fb:app_id" content="321809675046639">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jiayi (Jason) Liu">
 <link rel="prev" href="../imagenet-benchmark/" title="ImageNet Challenge Benchmark" type="text/html">
 <link rel="next" href="../pocketflow-intro/" title="PocketFlow unofficial guide" type="text/html">
 <meta property="og:site_name" content="Lab of Random">
@@ -48,7 +36,7 @@ MathJax.Hub.Config({
 navbar-dark bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://jiayiliu.github.com/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Lab of Random</span>
         </a>
@@ -90,10 +78,11 @@ navbar-dark bg-dark
         <!--Body content-->
         
         
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">TensorFlow Lite Conversion</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     Jiayi (Jason) Liu
             </span></p>
             <p class="dateline">
@@ -164,17 +153,17 @@ Specifically, I am going to explain the workflow buried in Tensorflow Lite webpa
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">tensorflow_version</span> 1.15
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="k">import</span> <span class="n">files</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
 <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="k">import</span> <span class="n">keras</span>
-<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="k">import</span> <span class="n">lite</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">lite</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">packaging</span> <span class="k">import</span> <span class="n">version</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="k">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">packaging</span> <span class="kn">import</span> <span class="n">version</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
@@ -662,7 +651,7 @@ Call initializer instance with the dtype argument instead of passing it to the c
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lite</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">__all__</span><span class="p">:</span>
         <span class="n">type_choice</span><span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="p">[</span><span class="n">lite</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">tensorflow.lite.python</span> <span class="k">import</span> <span class="n">lite_constants</span> <span class="k">as</span> <span class="n">constants</span>
+    <span class="kn">from</span> <span class="nn">tensorflow.lite.python</span> <span class="kn">import</span> <span class="n">lite_constants</span> <span class="k">as</span> <span class="n">constants</span>
     <span class="n">type_choice</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">"float"</span><span class="p">:</span> <span class="p">[</span><span class="n">constants</span><span class="o">.</span><span class="n">FLOAT</span><span class="p">],</span>      <span class="c1"># tf.float32</span>
         <span class="s2">"int8"</span><span class="p">:</span> <span class="p">[</span><span class="n">constants</span><span class="o">.</span><span class="n">INT8</span><span class="p">],</span>        <span class="c1"># tf.int8</span>
@@ -837,10 +826,10 @@ Call initializer instance with the dtype argument instead of passing it to the c
 
 
 
-<div id="794a307c-bf54-4c2a-8954-1e10defad0a8"></div>
+<div id="e33644e3-4b31-46e6-85bc-de7394c5d822"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#794a307c-bf54-4c2a-8954-1e10defad0a8');
+var element = $('#e33644e3-4b31-46e6-85bc-de7394c5d822');
 require.config({
     paths: {
         DT: '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min',
@@ -6095,7 +6084,7 @@ require.config({
 </script><div class="fb-comments" data-href="https://jiayiliu.github.com/posts/tensoflow-lite-convertor/" data-width="470"></div>
 
 
-        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -6137,6 +6126,7 @@ MathJax.Hub.Config({
    }(document, 'script', 'facebook-jssdk'));
 </script><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
             
         </footer>
 </div>

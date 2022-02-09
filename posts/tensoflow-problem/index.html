@@ -32,7 +32,8 @@ fb: http://ogp.me/ns/fb# " lang="en">
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
         <a class="navbar-brand" href="../../">
@@ -89,7 +90,7 @@ navbar-dark bg-dark
             <time class="published dt-published" datetime="2019-06-09T21:41:01-08:00" itemprop="datePublished" title="2019-06-09 21:41">2019-06-09 21:41</time></a>
             </p>
                 <p class="commentline">
-        
+    
 <span class="fb-comments-count" data-url="/posts/tensoflow-problem/">
 
 
@@ -101,8 +102,7 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<div class="cell border-box-sizing text_cell rendered">
+    <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -263,7 +263,6 @@ Pass --helpshort or --helpfull to see help on flags.
 </div>
 </div>
 </div>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
@@ -278,7 +277,7 @@ Pass --helpshort or --helpfull to see help on flags.
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
-        
+    
 <div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
@@ -343,7 +342,7 @@ MathJax.Hub.Config({
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -354,9 +353,7 @@ MathJax.Hub.Config({
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

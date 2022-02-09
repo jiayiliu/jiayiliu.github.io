@@ -7,98 +7,102 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/aaai.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/benchmark.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_life.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_notes.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_programming.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_python.xml</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_tensorflow.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cat_tutorial.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/colab.xml</loc>
-  <lastmod>2020-08-09T22:24:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/compression.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/cvpr.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/imagenet.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/keras.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/lite.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/neurips.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/notes.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/pocketflow.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/profiling.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/python.xml</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/research.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://jiayiliu.github.com/categories/resource.xml</loc>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/tensorflow.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/categories/tutorial.xml</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/rss.xml</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://jiayiliu.github.com/sitemap.xml</loc>
-  <lastmod>2020-08-09T22:28:00Z</lastmod>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </sitemap>
 </sitemapindex>

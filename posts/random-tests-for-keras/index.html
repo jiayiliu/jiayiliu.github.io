@@ -31,7 +31,8 @@ fb: http://ogp.me/ns/fb# " lang="en">
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
         <a class="navbar-brand" href="../../">
@@ -88,7 +89,7 @@ navbar-dark bg-dark
             <time class="published dt-published" datetime="2018-09-06T23:20:04-07:00" itemprop="datePublished" title="2018-09-06 23:20">2018-09-06 23:20</time></a>
             </p>
                 <p class="commentline">
-        
+    
 <span class="fb-comments-count" data-url="/posts/random-tests-for-keras/">
 
 
@@ -100,8 +101,7 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<div class="cell border-box-sizing text_cell rendered">
+    <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -184,7 +184,7 @@ navbar-dark bg-dark
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># not fix any seed</span>
 <span class="o">!</span>rm -f no_train_no_seed_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py &gt;&gt; no_train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py &gt;&gt; no_train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -199,7 +199,7 @@ navbar-dark bg-dark
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy seed</span>
 <span class="o">!</span>rm -f no_train_numpy_seed_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> &gt;&gt; no_train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> &gt;&gt; no_train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -214,7 +214,7 @@ navbar-dark bg-dark
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy seed, but change tf random seed</span>
 <span class="o">!</span>rm -f no_train_numpy_seed_fixed_diff_tf_seeds.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -t <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_tf_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -t <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_tf_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -229,7 +229,7 @@ navbar-dark bg-dark
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy seed, but change random seed</span>
 <span class="o">!</span>rm -f no_train_numpy_seed_fixed_diff_random_seeds.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_random_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -n <span class="m">1</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; no_train_numpy_seed_fixed_diff_random_seeds.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -328,7 +328,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy seed, also not use data generator</span>
 <span class="o">!</span>rm -f train_numpy_random_seed_fixed_w0.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_w0_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -w <span class="m">0</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_seed_fixed_w0.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_w0_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -w <span class="m">0</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_seed_fixed_w0.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -376,7 +376,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># not fix any seed</span>
 <span class="o">!</span>rm -f train_no_seed_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_no_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> &gt;&gt; train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_no_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> &gt;&gt; train_no_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -424,7 +424,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy seed</span>
 <span class="o">!</span>rm -f train_numpy_seed_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">1</span> &gt;&gt; train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_seed_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">1</span> &gt;&gt; train_numpy_seed_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -472,7 +472,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy, random, and tf seeds</span>
 <span class="o">!</span>rm -f train_numpy_random_tf_seeds_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -520,7 +520,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># fix numpy, random, tf and hash seeds</span>
 <span class="o">!</span>rm -f train_numpy_random_tf_hash_seeds_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_hash_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_hash_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -f train_numpy_random_tf_hash_seeds_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv -e <span class="m">1</span> -n <span class="m">2</span> -r <span class="si">${</span><span class="nv">i</span><span class="si">}</span> &gt;&gt; train_numpy_random_tf_hash_seeds_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -568,7 +568,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># train all fixed</span>
 <span class="o">!</span>rm -f train_all_fixed.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">4</span> -a <span class="m">2</span> -s -f train_all_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">4</span> -a <span class="m">2</span> -s -f train_all_fixed_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -625,7 +625,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">!</span>rm -f train_all_fixed_w4.csv
-<span class="o">!</span><span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">3</span> -a <span class="m">1</span> -w <span class="m">4</span> -s -f train_all_fixed_w4_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed_w4.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+<span class="o">!</span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">10</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> ./mnist_cnn.py -e <span class="m">1</span> -r <span class="m">2</span> -n <span class="m">1</span> -t <span class="m">3</span> -a <span class="m">1</span> -w <span class="m">4</span> -s -f train_all_fixed_w4_<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.csv &gt;&gt; train_all_fixed_w4.csv <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
 </pre></div>
 
     </div>
@@ -721,7 +721,6 @@ However, if you code uses tensorflow random generator somewhere, you might want 
 </div>
 </div>
 </div>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/keras/" rel="tag">keras</a></li>
@@ -733,7 +732,7 @@ However, if you code uses tensorflow random generator somewhere, you might want 
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
-        
+    
 <div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
@@ -798,7 +797,7 @@ MathJax.Hub.Config({
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -809,9 +808,7 @@ MathJax.Hub.Config({
         <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

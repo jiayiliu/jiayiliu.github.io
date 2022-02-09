@@ -7,174 +7,186 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://jiayiliu.github.com/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2018/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2019/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/2020/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/2022/</loc>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/archive.html</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/aaai/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/benchmark/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_life/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_notes/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_programming/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_python/</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_tensorflow/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cat_tutorial/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/colab/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/compression/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/cvpr/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/imagenet/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/keras/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/lite/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/neurips/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/notes/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/pocketflow/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/profiling/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/python/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/research/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/categories/resource/</loc>
+  <lastmod>2022-02-09T23:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/tensorflow/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/categories/tutorial/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/index-1.html</loc>
-  <lastmod>2020-08-09T22:27:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/CVPR2019/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/PythonDev/</loc>
-  <lastmod>2020-08-09T22:26:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/aaai2020/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/imagenet-benchmark/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/index-colab/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/neurips2019/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/pocketflow-intro/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://jiayiliu.github.com/posts/python_packages/</loc>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/random-tests-for-keras/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/refinance_a_loan/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-checkpoint-1/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-lite-convertor/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-lite/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-problem/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://jiayiliu.github.com/posts/tensoflow-profiling/</loc>
-  <lastmod>2020-08-09T22:20:00Z</lastmod>
+  <lastmod>2022-02-09T23:38:00Z</lastmod>
  </url>
 </urlset>

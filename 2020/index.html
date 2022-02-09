@@ -22,7 +22,8 @@ fb: http://ogp.me/ns/fb# " lang="en">
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
         <a class="navbar-brand" href="../">
@@ -65,7 +66,7 @@ navbar-dark bg-dark
     </header><nav class="archivenav"><ul class="pager">
 <li class="previous"><a href="../2019/" rel="prev">Previous</a></li>
             <li class="up"><a href="../archive.html" rel="up">Up</a></li>
-            <li class="next disabled"><a href="#" rel="next">Next</a></li>
+            <li class="next"><a href="../2022/" rel="next">Next</a></li>
         </ul></nav><ul class="postlist">
 <li>
 <time class="listdate" datetime="2020-08-08T15:20:01-08:00" title="2020-08-08 15:20">2020-08-08 15:20</time><a href="../posts/PythonDev/" class="listtitle">How to write reusable (but not usable) code</a>
@@ -80,7 +81,7 @@ navbar-dark bg-dark
 <time class="listdate" datetime="2020-01-07T20:00:00-08:00" title="2020-01-07 20:00">2020-01-07 20:00</time><a href="../posts/neurips2019/" class="listtitle">Review of NeurIPS 2019 for Model Compression</a>
 </li>
     </ul></article><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2022         <a href="mailto:jiayi.uiuc@gmail.com">Jiayi (Jason) Liu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -91,9 +92,7 @@ navbar-dark bg-dark
         <script src="../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-2"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
